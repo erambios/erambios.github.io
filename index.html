@@ -13,7 +13,7 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://erambios.org/">
 
-    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://erambios.org/">
     <meta property="og:title" content="ERAMBIOS — Basic Input/Output System of Being & Technology">
@@ -26,7 +26,7 @@
     <meta name="twitter:title" content="ERAMBIOS — Basic Input/Output System of Being & Technology">
     <meta name="twitter:description" content="A foundational framework for the alignment of human consciousness, technology, and anti-entropic discipline. Created by Tomasz Wisniewski.">
 
-    <!-- Dane Strukturalne JSON-LD dla Google (Schema.org) -->
+    <!-- Dane Strukturalne JSON-LD dla Google -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -83,39 +83,15 @@
             border: 1px solid var(--border-color);
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="100%" height="auto" style="max-width: 500px; display: block; margin: 0 auto;">
-  <rect width="500" height="400" fill="#030303" />
 
-  <g stroke="#d31c1c" stroke-width="3" fill="none">
-    <!-- Concentric Circles -->
-    <circle cx="250" cy="200" r="180" />
-    <circle cx="250" cy="200" r="150" />
-    <circle cx="250" cy="200" r="120" />
-    <circle cx="250" cy="200" r="90" />
+        .logo-wrapper {
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
-    <!-- Top Bracket / Frame -->
-    <path d="M 180,135 L 180,115 L 320,115 L 320,135" stroke-width="3.5" />
-
-    <!-- Bottom Bracket / Frame -->
-    <path d="M 180,265 L 180,285 L 320,285 L 320,265" stroke-width="3.5" />
-  </g>
-
-  <!-- Dark mask for the typography cutout -->
-  <rect x="100" y="150" width="300" height="100" fill="#030303" />
-
-  <!-- Typography -->
-  <text x="250" y="218" 
-        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
-        font-size="54" 
-        font-weight="800" 
-        letter-spacing="4" 
-        fill="#ffffff" 
-        text-anchor="middle">ERAMBIOS</text>
-</svg>
-        
         h1 {
             color: var(--header-color);
-            font-size: 2.2rem;
+            font-size: 2rem;
             letter-spacing: 2px;
             text-transform: uppercase;
             border-bottom: 2px solid var(--accent-color);
@@ -127,7 +103,7 @@
             color: var(--header-color);
             font-size: 1.4rem;
             margin-top: 35px;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--accent-color);
             padding-bottom: 8px;
             letter-spacing: 1px;
         }
@@ -210,7 +186,7 @@
                 padding: 20px;
             }
             h1 {
-                font-size: 1.6rem;
+                font-size: 1.5rem;
             }
             .footer {
                 flex-direction: column;
@@ -224,6 +200,24 @@
 <body>
 
 <div class="container">
+    
+    <!-- EMBEDDED LOGO SVG -->
+    <div class="logo-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="100%" height="auto" style="max-width: 380px; display: block; margin: 0 auto;">
+          <rect width="500" height="400" fill="#14171c" />
+          <g stroke="#d31c1c" stroke-width="3" fill="none">
+            <circle cx="250" cy="200" r="180" />
+            <circle cx="250" cy="200" r="150" />
+            <circle cx="250" cy="200" r="120" />
+            <circle cx="250" cy="200" r="90" />
+            <path d="M 180,135 L 180,115 L 320,115 L 320,135" stroke-width="3.5" />
+            <path d="M 180,265 L 180,285 L 320,285 L 320,265" stroke-width="3.5" />
+          </g>
+          <rect x="100" y="150" width="300" height="100" fill="#14171c" />
+          <text x="250" y="218" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="54" font-weight="800" letter-spacing="4" fill="#ffffff" text-anchor="middle">ERAMBIOS</text>
+        </svg>
+    </div>
+
     <h1>ARCHITECTURE OF BEING AND THE DEVELOPMENT OF CIVILIZATION</h1>
     <p><strong>An Original Philosophical & Technological Framework</strong><br>
     <strong>Author:</strong> Tomasz Wisniewski<br>
@@ -363,3 +357,4 @@
 
 </body>
 </html>
+    
