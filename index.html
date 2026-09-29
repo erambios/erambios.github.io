@@ -19,10 +19,11 @@
       color: var(--text-color);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.7;
+      overflow-x: hidden;
     }
 
-    /* PEŁNOEKRANOWE INTRO WIDEO */
-    #video-overlay {
+    /* LEKKA ANIMACJA OTWARCIA (PRELOADER HTML/CSS) */
+    #intro-overlay {
       position: fixed;
       top: 0;
       left: 0;
@@ -33,18 +34,58 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: opacity 0.8s ease, visibility 0.8s ease;
+      animation: fadeOutOverlay 0.6s ease 2.2s forwards;
     }
 
-    #video-overlay.fade-out {
+    .intro-content {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
       opacity: 0;
-      visibility: hidden;
+      transform: scale(0.85);
+      animation: zoomInLogo 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
     }
 
-    #intro-video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .intro-box {
+      width: 55px;
+      height: 55px;
+      background-color: #161a20;
+      border: 3px solid #d32f2f;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 25px rgba(211, 47, 47, 0.5);
+    }
+
+    .intro-letter {
+      color: #ffffff;
+      font-size: 1.8rem;
+      font-weight: 900;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .intro-text {
+      color: #ffffff;
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      opacity: 0;
+      transform: translateX(-10px);
+      animation: fadeInText 0.6s ease 0.8s forwards;
+    }
+
+    @keyframes zoomInLogo {
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes fadeInText {
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeOutOverlay {
+      to { opacity: 0; visibility: hidden; }
     }
 
     /* STRUKTURA NAWIGACJI I STRONY */
@@ -119,17 +160,20 @@
       .hero h1 { font-size: 2rem; }
       .hero p { font-size: 1.05rem; }
       .container { margin: 2rem auto; }
+      .intro-text { font-size: 1.3rem; letter-spacing: 2px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAKŁADKA Z INTRO WIDEO -->
-  <div id="video-overlay">
-    <video id="intro-video" autoplay muted playsinline>
-      <source src="intro.mp4" type="video/mp4">
-      Twoja przeglądarka nie obsługuje wideo.
-    </video>
+  <!-- ANIMACJA OTWARCIA -->
+  <div id="intro-overlay">
+    <div class="intro-content">
+      <div class="intro-box">
+        <span class="intro-letter">E</span>
+      </div>
+      <span class="intro-text">ERAMBIOS</span>
+    </div>
   </div>
 
   <header>
@@ -179,22 +223,13 @@
     <p>&copy; 2026 Erambios.org — All rights reserved.</p>
   </footer>
 
-  <!-- SKRYPT ZARZĄDZAJĄCY INTRO -->
   <script>
-    const video = document.getElementById('intro-video');
-    const overlay = document.getElementById('video-overlay');
-
-    if (video && overlay) {
-      // Po zakończeniu odtwarzania wideo płynnie zanika
-      video.addEventListener('ended', () => {
-        overlay.classList.add('fade-out');
-      });
-
-      // Zabezpieczenie: usunięcie nakładki po 10 sekundach
+    window.addEventListener('load', () => {
       setTimeout(() => {
-        overlay.classList.add('fade-out');
-      }, 10000);
-    }
+        const overlay = document.getElementById('intro-overlay');
+        if (overlay) overlay.style.display = 'none';
+      }, 2800);
+    });
   </script>
 
 </body>
