@@ -3,22 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Erambios – Philosophical Inquiries & Foundations</title>
-  
-</head>
-<body>
-
-  <header>
-    <nav>
-      <a href="index.html" class="logo">ERAMBIOS</a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="filozofia.html">Philosophy & Theses</a></li>
-        <li><a href="ewolucja-ciekawosci.html">Evolution of Curiosity</a></li>
-        <li><a href="kontakt.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <title>Erambios – Basic Input/Output System of Being</title>
   <style>
     :root {
       --bg-color: #0d0f12;
@@ -48,14 +33,19 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.2rem 2rem;
+      padding: 1rem 2rem;
     }
-    .logo {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--accent-color);
+    .logo-box {
+      display: flex;
+      align-items: center;
       text-decoration: none;
-      letter-spacing: 2px;
+    }
+    .logo-text {
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 1.3rem;
+      letter-spacing: 2.5px;
+      margin-left: 0.9rem;
     }
     .nav-links { display: flex; list-style: none; gap: 1.8rem; }
     .nav-links a {
@@ -65,65 +55,65 @@
       transition: color 0.2s ease;
     }
     .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
-    .container { max-width: 850px; margin: 3rem auto; padding: 0 1.5rem; }
-    .hero { text-align: center; margin-bottom: 3rem; padding: 1rem 0; }
-    .hero h1 { font-size: 2.8rem; color: #ffffff; margin-bottom: 1rem; letter-spacing: 1px; }
-    .hero p { font-size: 1.15rem; color: var(--text-muted); max-width: 650px; margin: 0 auto; }
-    .axiom-box {
+    .container { max-width: 850px; margin: 3.5rem auto; padding: 0 1.5rem; }
+    
+    .hero { margin-bottom: 4rem; }
+    .hero h1 { font-size: 2.8rem; color: #fff; margin-bottom: 1rem; font-weight: 800; letter-spacing: -0.5px; }
+    .hero p { font-size: 1.25rem; color: var(--text-muted); max-width: 720px; }
+    
+    .quote-card {
       background-color: var(--card-bg);
-      border-left: 3px solid var(--accent-color);
+      border: 1px solid var(--border-color);
+      border-left: 4px solid var(--accent-color);
       padding: 2rem;
       border-radius: 4px;
-      margin: 2.5rem 0;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      margin-bottom: 3.5rem;
     }
-    .axiom-box p { font-size: 1.15rem; font-style: italic; color: #ffffff; margin-bottom: 0.5rem; }
-    .axiom-box span { font-size: 0.85rem; color: var(--accent-color); text-transform: uppercase; letter-spacing: 1px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-    .card {
+    .quote-card p { font-size: 1.15rem; font-style: italic; color: #fff; margin-bottom: 0.8rem; }
+    .quote-card span { font-size: 0.85rem; color: var(--accent-color); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; }
+    
+    .section-title { font-size: 1.6rem; color: #fff; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; }
+    .pillars-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 3rem; }
+    .pillar-item {
       background-color: var(--card-bg);
       border: 1px solid var(--border-color);
       padding: 1.8rem;
-      border-radius: 6px;
-      transition: transform 0.2s ease, border-color 0.2s ease;
+      border-radius: 4px;
     }
-    .card:hover { transform: translateY(-4px); border-color: var(--accent-color); }
-    .card h3 { color: var(--accent-color); margin-bottom: 0.8rem; }
-    .card p { font-size: 0.95rem; color: var(--text-muted); }
-    .card a { display: inline-block; margin-top: 1rem; color: var(--text-color); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
-    .card a:hover { text-decoration: underline; }
+    .pillar-item h3 { color: var(--accent-color); font-size: 1.25rem; margin-bottom: 0.6rem; }
+    .pillar-item p { color: var(--text-color); font-size: 0.98rem; }
+    
     footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; }
 
-    /* RESPONSYWNOŚĆ DLA SMARTFONÓW */
     @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
-      }
-      .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-      }
-      .nav-links a {
-        font-size: 0.9rem;
-      }
-      .hero h1 {
-        font-size: 2rem;
-      }
-      .hero p {
-        font-size: 1rem;
-      }
-      .container {
-        margin: 1.5rem auto;
-        padding: 0 1rem;
-      }
-      .axiom-box {
-        padding: 1.2rem;
-      }
+      nav { flex-direction: column; gap: 1.2rem; padding: 1rem; }
+      .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1.05rem; }
+      .container { margin: 2rem auto; }
     }
   </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo-box">
+        <svg width="42" height="42" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <rect width="200" height="200" fill="#161a20" rx="35"/>
+          <rect x="10" y="10" width="180" height="180" fill="none" stroke="#d32f2f" stroke-width="16" rx="30"/>
+          <text x="100" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="120" fill="#ffffff" text-anchor="middle">E</text>
+        </svg>
+        <span class="logo-text">ERAMBIOS</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="filozofia.html">Philosophy & Theses</a></li>
+        <li><a href="ewolucja-ciekawosci.html">Evolution of Curiosity</a></li>
+        <li><a href="kontakt.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main class="container">
     <section class="hero">
@@ -131,33 +121,22 @@
       <p>An intellectual sanctuary dedicated to rigorous ontological inquiry, structural philosophy, and the confrontation with reality.</p>
     </section>
 
-    <div class="axiom-box">
-      <p>“One can be a fool while being intelligent, but one cannot be intelligent while being a fool.”</p>
+    <div class="quote-card">
+      <p>"One can be a fool while being intelligent, but one cannot be intelligent while being a fool."</p>
       <span>Axiom of Identity</span>
     </div>
 
-    <section>
-      <h2 style="color: #fff; margin-bottom: 1rem;">Core Pillars</h2>
-      <p style="color: var(--text-muted);">Erambios stands as a framework of resistance against intellectual conformity. It seeks to analyze the friction between human cognition and the objective structure of the universe.</p>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Philosophy & Theses</h3>
-          <p>Examine core frameworks including Passive Chaos, Ontological Malicology, Solitary Amoralism, and the Architecture of Being.</p>
-          <a href="filozofia.html">Explore Theses &rarr;</a>
-        </div>
-        <div class="card">
-          <h3>Evolution of Curiosity</h3>
-          <p>A deep investigation into how three fundamental questions formed civilization, ending with the Epilog on Shoulders.</p>
-          <a href="ewolucja-ciekawosci.html">Read Inquiry &rarr;</a>
-        </div>
-        <div class="card">
-          <h3>Direct Dialogue</h3>
-          <p>Engage in intellectual correspondence, critique, or inquiry regarding the publications and theses presented here.</p>
-          <a href="kontakt.html">Get in Touch &rarr;</a>
-        </div>
+    <h2 class="section-title">Core Pillars</h2>
+    <div class="pillars-grid">
+      <div class="pillar-item">
+        <h3>Thesis of Passive Chaos</h3>
+        <p>Chaos is not an active, destructive force; it is the default state of natural energy dissipation. Order, therefore, is an act of intellectual resistance.</p>
       </div>
-    </section>
+      <div class="pillar-item">
+        <h3>Manifesto of Ontological Malicology</h3>
+        <p>Reality exhibits cognitive resistance whenever human consciousness approaches objective truth—a structural mechanism of epistemological friction.</p>
+      </div>
+    </div>
   </main>
 
   <footer>
