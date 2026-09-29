@@ -16,23 +16,24 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background-color: var(--bg-color); color: var(--text-color); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.8; }
     header { border-bottom: 1px solid var(--border-color); background-color: rgba(13, 15, 18, 0.95); position: sticky; top: 0; z-index: 1000; }
-    nav { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem; }
-    .logo { font-size: 1.4rem; font-weight: 700; color: var(--accent-color); text-decoration: none; letter-spacing: 2px; }
+    nav { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+    .logo-box { display: flex; align-items: center; text-decoration: none; }
+    .logo-text { color: #ffffff; font-weight: 800; font-size: 1.3rem; letter-spacing: 2.5px; margin-left: 0.9rem; }
     .nav-links { display: flex; list-style: none; gap: 1.8rem; }
-    .nav-links a { color: var(--text-color); text-decoration: none; font-size: 0.95rem; }
+    .nav-links a { color: var(--text-color); text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
     .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
-    .container { max-width: 800px; margin: 3rem auto; padding: 0 1.5rem; }
-    .back-link { display: inline-block; color: var(--accent-color); text-decoration: none; font-size: 0.9rem; margin-bottom: 2rem; font-weight: 600; }
-    .back-link:hover { text-decoration: underline; }
+    .container { max-width: 800px; margin: 3.5rem auto; padding: 0 1.5rem; }
     h1 { color: #fff; font-size: 2.4rem; margin-bottom: 0.5rem; }
-    .meta { color: var(--accent-color); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2.5rem; display: block; }
-    .content-box { background-color: var(--card-bg); border: 1px solid var(--border-color); padding: 3rem; border-radius: 6px; }
+    .meta { color: var(--accent-color); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2.5rem; display: block; font-weight: 700; }
+    .content-box { background-color: var(--card-bg); border: 1px solid var(--border-color); padding: 3rem; border-radius: 4px; }
     .content-box p { margin-bottom: 1.5rem; color: var(--text-color); font-size: 1.05rem; }
+    .back-link { display: inline-block; margin-top: 2rem; color: var(--accent-color); text-decoration: none; font-weight: 600; }
+    .back-link:hover { text-decoration: underline; }
     footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; }
     @media (max-width: 768px) {
-      nav { flex-direction: column; gap: 1rem; padding: 1rem; }
+      nav { flex-direction: column; gap: 1.2rem; padding: 1rem; }
       .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
-      .container { margin: 1.5rem auto; padding: 0 1rem; }
+      .container { margin: 2rem auto; }
       .content-box { padding: 1.5rem; }
     }
   </style>
@@ -41,7 +42,14 @@
 
   <header>
     <nav>
-      <a href="index.html" class="logo">ERAMBIOS</a>
+      <a href="index.html" class="logo-box">
+        <svg width="42" height="42" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <rect width="200" height="200" fill="#161a20" rx="35"/>
+          <rect x="10" y="10" width="180" height="180" fill="none" stroke="#d32f2f" stroke-width="16" rx="30"/>
+          <text x="100" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="120" fill="#ffffff" text-anchor="middle">E</text>
+        </svg>
+        <span class="logo-text">ERAMBIOS</span>
+      </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="filozofia.html" class="active">Philosophy & Theses</a></li>
@@ -52,17 +60,15 @@
   </header>
 
   <main class="container">
-    <a href="filozofia.html" class="back-link">&larr; Back to Philosophy & Theses</a>
-    
     <h1>Thesis of Passive Chaos</h1>
-    <span class="meta">Core Authorial Thesis</span>
+    <span class="meta">Ontological Dissipation & The Act of Resistance</span>
 
     <article class="content-box">
-      <p>Chaos is not an active, malicious, or destructive force operating within the universe; rather, it represents the default, neutral state of natural energy dissipation. It is the baseline reality of unguided existence—a constant movement toward entropy when external structure is absent.</p>
+      <p>Chaos is not a malignant, calculating entity striving to tear down structure; it is merely the default, passive state of physical and intellectual reality when conscious energy ceases to exert control.</p>
+      
+      <p>Left unmaintained, systems revert naturally toward maximum entropy. Therefore, order is never a natural baseline—it is a conscious, continuous, and defiant act of intellectual resistance against passive dissipation.</p>
 
-      <p>Because chaos is inherently passive, order cannot occur spontaneously or sustain itself without effort. Every structure, every system of logic, and every moral architecture is an active act of intellectual and existential resistance against this natural dissipation.</p>
-
-      <p>To establish order is to wage a deliberate battle against the passive gravity of reality. Reason and consciousness serve as the primary mechanisms through which order asserts itself against the indifferent tide of chaos.</p>
+      <a href="filozofia.html" class="back-link">&larr; Back to Philosophy & Theses</a>
     </article>
   </main>
 
