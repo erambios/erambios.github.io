@@ -14,101 +14,25 @@
       --border-color: #21262d;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.7;
-    }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      background-color: rgba(13, 15, 18, 0.95);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav {
-      max-width: 1000px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.2rem 2rem;
-    }
-    .logo {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--accent-color);
-      text-decoration: none;
-      letter-spacing: 2px;
-    }
+    body { background-color: var(--bg-color); color: var(--text-color); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.8; }
+    header { border-bottom: 1px solid var(--border-color); background-color: rgba(13, 15, 18, 0.95); position: sticky; top: 0; z-index: 1000; }
+    nav { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+    .logo-box { display: flex; align-items: center; text-decoration: none; }
+    .logo-text { color: #ffffff; font-weight: 800; font-size: 1.3rem; letter-spacing: 2.5px; margin-left: 0.9rem; }
     .nav-links { display: flex; list-style: none; gap: 1.8rem; }
-    .nav-links a {
-      color: var(--text-color);
-      text-decoration: none;
-      font-size: 0.95rem;
-      transition: color 0.2s ease;
-    }
+    .nav-links a { color: var(--text-color); text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
     .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
-    .container { max-width: 850px; margin: 3rem auto; padding: 0 1.5rem; }
-    h1 { color: #fff; font-size: 2.2rem; margin-bottom: 1rem; }
-    .subtitle { color: var(--text-muted); margin-bottom: 3rem; font-size: 1.1rem; }
-    .essay-card {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border-color);
-      padding: 2.5rem;
-      border-radius: 6px;
-      margin-bottom: 2rem;
-    }
-    .essay-card h2 { color: var(--accent-color); font-size: 1.6rem; margin-bottom: 1rem; }
-    .essay-card p { margin-bottom: 1.2rem; color: var(--text-color); }
-    .btn-link {
-      display: inline-block;
-      margin-top: 1rem;
-      color: var(--accent-color);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      border: 1px solid var(--accent-color);
-      padding: 0.6rem 1.2rem;
-      border-radius: 4px;
-      transition: background-color 0.2s ease, color 0.2s ease;
-    }
-    .btn-link:hover {
-      background-color: var(--accent-color);
-      color: var(--bg-color);
-    }
+    .container { max-width: 800px; margin: 3.5rem auto; padding: 0 1.5rem; }
+    h1 { color: #fff; font-size: 2.4rem; margin-bottom: 0.5rem; }
+    .meta { color: var(--accent-color); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2.5rem; display: block; font-weight: 700; }
+    .content-box { background-color: var(--card-bg); border: 1px solid var(--border-color); padding: 3rem; border-radius: 4px; }
+    .content-box p { margin-bottom: 1.5rem; color: var(--text-color); font-size: 1.05rem; }
     footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; }
-
-    /* RESPONSYWNOŚĆ DLA SMARTFONÓW */
     @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
-      }
-      .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-      }
-      .nav-links a {
-        font-size: 0.9rem;
-      }
-      h1 {
-        font-size: 1.8rem;
-      }
-      .subtitle {
-        font-size: 1rem;
-        margin-bottom: 2rem;
-      }
-      .container {
-        margin: 1.5rem auto;
-        padding: 0 1rem;
-      }
-      .essay-card {
-        padding: 1.5rem;
-      }
+      nav { flex-direction: column; gap: 1.2rem; padding: 1rem; }
+      .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+      .container { margin: 2rem auto; }
+      .content-box { padding: 1.5rem; }
     }
   </style>
 </head>
@@ -116,7 +40,14 @@
 
   <header>
     <nav>
-      <a href="index.html" class="logo">ERAMBIOS</a>
+      <a href="index.html" class="logo-box">
+        <svg width="42" height="42" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <rect width="200" height="200" fill="#161a20" rx="35"/>
+          <rect x="10" y="10" width="180" height="180" fill="none" stroke="#d32f2f" stroke-width="16" rx="30"/>
+          <text x="100" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="120" fill="#ffffff" text-anchor="middle">E</text>
+        </svg>
+        <span class="logo-text">ERAMBIOS</span>
+      </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="filozofia.html">Philosophy & Theses</a></li>
@@ -128,18 +59,14 @@
 
   <main class="container">
     <h1>Evolution of Curiosity</h1>
-    <p class="subtitle">How three fundamental questions forged civilization and defined the boundary of human knowledge.</p>
+    <span class="meta">How Three Questions Built Civilization</span>
 
-    <article class="essay-card">
-      <h2>How Three Questions Built Civilization</h2>
-      <p>Human advancement was not birthed by satisfaction, but by systemic unrest. Civilization exists because consciousness dared to construct three questions that fundamentally challenged survival-driven existence.</p>
-      <p>From primitive pattern recognition to abstract metaphysics, curiosity evolved from a biological advantage into an existential mandate.</p>
-    </article>
+    <article class="content-box">
+      <p>Curiosity is not merely a psychological impulse; it is the fundamental engine of human civilization. The transition from primal survival to structured philosophical inquiry was driven by three pivotal existential questions.</p>
+      
+      <p>The first question—<em>"What is this?"</em>—laid the foundation for empirical observation and tool creation. The second—<em>"How does it work?"</em>—gave rise to engineering, science, and systemic understanding. Finally, the third question—<em>"Why?"</em>—opened the door to ontology, ethics, and consciousness itself.</p>
 
-    <article class="essay-card">
-      <h2>Epilogue on Shoulders</h2>
-      <p>A reflection upon intellectual lineage and responsibility. We do not construct understanding from nothingness; we carry the weight of historical inquiry while standing upon the shoulders of past contemplation.</p>
-      <a href="epilog-na-ramionach.html" class="btn-link">Read Full Epilogue &rarr;</a>
+      <p>Through this evolutionary arc, human thought transformed from a tool of environmental adaptation into a sovereign force capable of interrogating existence itself.</p>
     </article>
   </main>
 
