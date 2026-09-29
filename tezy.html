@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Philosophical Theses & Treatises – Erambios</title>
+  <style>
+    :root {
+      --bg-color: #0d0f12;
+      --card-bg: #161a20;
+      --accent-color: #d32f2f;
+      --text-color: #e1e6ed;
+      --text-muted: #8b949e;
+      --border-color: #21262d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+    }
+    header {
+      border-bottom: 1px solid var(--border-color);
+      background-color: rgba(13, 15, 18, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    .logo-box { display: flex; align-items: center; text-decoration: none; }
+    .logo-text { color: #ffffff; font-weight: 800; font-size: 1.3rem; letter-spacing: 2.5px; margin-left: 0.9rem; }
+    .nav-links { display: flex; list-style: none; gap: 1.8rem; }
+    .nav-links a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
+    .container { max-width: 850px; margin: 3.5rem auto; padding: 0 1.5rem; }
+    h1 { color: #fff; font-size: 2.4rem; margin-bottom: 0.5rem; font-weight: 900; }
+    .subtitle { color: var(--text-muted); margin-bottom: 3rem; font-size: 1.1rem; }
+    .thesis-item {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 2rem;
+      border-radius: 4px;
+      margin-bottom: 2rem;
+    }
+    .thesis-item h2 { color: var(--accent-color); font-size: 1.4rem; margin-bottom: 0.8rem; }
+    .thesis-item p { color: var(--text-color); margin-bottom: 1.5rem; font-size: 1.02rem; }
+    .btn-link {
+      display: inline-block;
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: 1px solid var(--accent-color);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    .btn-link:hover {
+      background-color: var(--accent-color);
+      color: #ffffff;
+    }
+    footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; }
+
+    @media (max-width: 768px) {
+      nav { flex-direction: column; gap: 1.2rem; padding: 1rem; }
+      .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+      h1 { font-size: 1.8rem; }
+      .container { margin: 2rem auto; }
+      .thesis-item { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo-box notranslate" translate="no">
+        <svg width="42" height="42" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <rect width="200" height="200" fill="#161a20" rx="35"/>
+          <rect x="10" y="10" width="180" height="180" fill="none" stroke="#d32f2f" stroke-width="16" rx="30"/>
+          <text x="100" y="142" class="notranslate" translate="no" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="120" fill="#ffffff" text-anchor="middle">E</text>
+        </svg>
+        <span class="logo-text notranslate" translate="no">ERAMBIOS</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="filozofia.html">Manifesto</a></li>
+        <li><a href="tezy.html" class="active">Theses</a></li>
+        <li><a href="ewolucja-ciekawosci.html">Evolution of Curiosity</a></li>
+        <li><a href="kontakt.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Authorial Philosophical Theses</h1>
+    <p class="subtitle">A collection of foundational frameworks analyzing passive chaos, cognitive friction, morality, and historical continuity.</p>
+
+    <article class="thesis-item">
+      <h2>Thesis of Passive Chaos</h2>
+      <p>Chaos is not an active, destructive force; it is the default state of natural energy dissipation. Order, therefore, is an act of intellectual resistance against passive decay.</p>
+      <a href="teza-biernego-chaosu.html" class="btn-link">Read Full Thesis &rarr;</a>
+    </article>
+
+    <article class="thesis-item">
+      <h2>Manifesto of Ontological Malicology</h2>
+      <p>Reality exhibits cognitive resistance whenever human consciousness approaches objective truth. The universe contains a structural mechanism of friction verifying cognitive maturity.</p>
+      <a href="manifest-malicyzmu.html" class="btn-link">Read Full Manifesto &rarr;</a>
+    </article>
+
+    <article class="thesis-item">
+      <h2>Thesis of Solitary Amoralism</h2>
+      <p>An examination of moral constructs detached from collective social pressure, exploring the ethical stance of the isolated individual confronting cause and effect.</p>
+      <a href="teza-amoralnosci.html" class="btn-link">Read Full Thesis &rarr;</a>
+    </article>
+
+    <article class="thesis-item">
+      <h2>Architecture of Being: From Illusion to Truth</h2>
+      <p>A methodical transition mapping the path from perceptual deception to ontological reality, deconstructing unexamined paradigms to anchor consciousness in truth.</p>
+      <a href="architektura-bytu.html" class="btn-link">Read Full Treatise &rarr;</a>
+    </article>
+
+    <article class="thesis-item">
+      <h2>Epilogue on Shoulders</h2>
+      <p>An acknowledgement of historical continuity—reaffirming that true clarity comes from standing upon structural foundations laid before us while pushing past their boundaries.</p>
+      <a href="epilog-na-ramionach.html" class="btn-link">Read Epilogue &rarr;</a>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Erambios.org — All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
