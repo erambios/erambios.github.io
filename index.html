@@ -22,7 +22,6 @@
       overflow-x: hidden;
     }
 
-    /* LEKKA ANIMACJA OTWARCIA (PRELOADER HTML/CSS) */
     #intro-overlay {
       position: fixed;
       top: 0;
@@ -76,19 +75,10 @@
       animation: fadeInText 0.6s ease 0.8s forwards;
     }
 
-    @keyframes zoomInLogo {
-      to { opacity: 1; transform: scale(1); }
-    }
+    @keyframes zoomInLogo { to { opacity: 1; transform: scale(1); } }
+    @keyframes fadeInText { to { opacity: 1; transform: translateX(0); } }
+    @keyframes fadeOutOverlay { to { opacity: 0; visibility: hidden; } }
 
-    @keyframes fadeInText {
-      to { opacity: 1; transform: translateX(0); }
-    }
-
-    @keyframes fadeOutOverlay {
-      to { opacity: 0; visibility: hidden; }
-    }
-
-    /* STRUKTURA NAWIGACJI I STRONY */
     header {
       border-bottom: 1px solid var(--border-color);
       background-color: rgba(13, 15, 18, 0.95);
@@ -104,29 +94,14 @@
       align-items: center;
       padding: 1rem 2rem;
     }
-    .logo-box {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-    }
-    .logo-text {
-      color: #ffffff;
-      font-weight: 800;
-      font-size: 1.3rem;
-      letter-spacing: 2.5px;
-      margin-left: 0.9rem;
-    }
+    .logo-box { display: flex; align-items: center; text-decoration: none; }
+    .logo-text { color: #ffffff; font-weight: 800; font-size: 1.3rem; letter-spacing: 2.5px; margin-left: 0.9rem; }
     .nav-links { display: flex; list-style: none; gap: 1.8rem; }
-    .nav-links a {
-      color: var(--text-color);
-      text-decoration: none;
-      font-size: 0.95rem;
-      transition: color 0.2s ease;
-    }
+    .nav-links a { color: var(--text-color); text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
     .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
     .container { max-width: 850px; margin: 3.5rem auto; padding: 0 1.5rem; }
     
-    .hero { margin-bottom: 4rem; }
+    .hero { margin-bottom: 3.5rem; }
     .hero h1 { font-size: 2.8rem; color: #fff; margin-bottom: 1rem; font-weight: 800; letter-spacing: -0.5px; }
     .hero p { font-size: 1.25rem; color: var(--text-muted); max-width: 720px; }
     
@@ -141,17 +116,42 @@
     .quote-card p { font-size: 1.15rem; font-style: italic; color: #fff; margin-bottom: 0.8rem; }
     .quote-card span { font-size: 0.85rem; color: var(--accent-color); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; }
     
-    .section-title { font-size: 1.6rem; color: #fff; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; }
-    .pillars-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 3rem; }
-    .pillar-item {
+    .manifesto-preview {
       background-color: var(--card-bg);
       border: 1px solid var(--border-color);
-      padding: 1.8rem;
+      padding: 2.5rem;
       border-radius: 4px;
+      margin-bottom: 3rem;
     }
-    .pillar-item h3 { color: var(--accent-color); font-size: 1.25rem; margin-bottom: 0.6rem; }
-    .pillar-item p { color: var(--text-color); font-size: 0.98rem; }
-    
+    .manifesto-preview h2 { color: #fff; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .manifesto-preview .sub { color: var(--accent-color); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem; display: block; }
+    .manifesto-preview p { margin-bottom: 1.5rem; color: var(--text-color); }
+
+    .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+    .btn-primary {
+      background-color: var(--accent-color);
+      color: #fff;
+      padding: 0.8rem 1.6rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: background-color 0.2s ease;
+    }
+    .btn-primary:hover { background-color: #b71c1c; }
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--text-color);
+      border: 1px solid var(--border-color);
+      padding: 0.8rem 1.6rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+    .btn-secondary:hover { border-color: var(--accent-color); color: #fff; }
+
     footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; }
 
     @media (max-width: 768px) {
@@ -160,13 +160,12 @@
       .hero h1 { font-size: 2rem; }
       .hero p { font-size: 1.05rem; }
       .container { margin: 2rem auto; }
-      .intro-text { font-size: 1.3rem; letter-spacing: 2px; }
+      .btn-group { flex-direction: column; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ANIMACJA OTWARCIA (Z ZABEZPIECZENIEM PRZED TŁUMACZEM) -->
   <div id="intro-overlay" class="notranslate" translate="no">
     <div class="intro-content">
       <div class="intro-box">
@@ -188,7 +187,7 @@
       </a>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="filozofia.html">Philosophy & Theses</a></li>
+        <li><a href="filozofia.html">Manifesto</a></li>
         <li><a href="ewolucja-ciekawosci.html">Evolution of Curiosity</a></li>
         <li><a href="kontakt.html">Contact</a></li>
       </ul>
@@ -206,17 +205,16 @@
       <span>Axiom of Identity</span>
     </div>
 
-    <h2 class="section-title">Core Pillars</h2>
-    <div class="pillars-grid">
-      <div class="pillar-item">
-        <h3>Thesis of Passive Chaos</h3>
-        <p>Chaos is not an active, destructive force; it is the default state of natural energy dissipation. Order, therefore, is an act of intellectual resistance.</p>
+    <section class="manifesto-preview">
+      <h2>The Erambios Manifesto</h2>
+      <span class="sub">Basic Input/Output System of Being & Technology</span>
+      <p>Erambios is the low-level boot system of consciousness and civilization—a universal architecture of thought, intention, and self-awareness that exerts active resistance against chaos through technology.</p>
+
+      <div class="btn-group">
+        <a href="filozofia.html" class="btn-primary">Read Full Canonical Text &rarr;</a>
+        <a href="erambios-manifesto.pdf" download class="btn-secondary">Download PDF</a>
       </div>
-      <div class="pillar-item">
-        <h3>Manifesto of Ontological Malicology</h3>
-        <p>Reality exhibits cognitive resistance whenever human consciousness approaches objective truth—a structural mechanism of epistemological friction.</p>
-      </div>
-    </div>
+    </section>
   </main>
 
   <footer>
