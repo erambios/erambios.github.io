@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Philosophy & Theses – Erambios</title>
+  <title>Manifesto of Erambios – Erambios</title>
   <style>
     :root {
       --bg-color: #0d0f12;
@@ -18,8 +18,10 @@
       background-color: var(--bg-color);
       color: var(--text-color);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.7;
+      line-height: 1.8;
+      overflow-x: hidden;
     }
+
     header {
       border-bottom: 1px solid var(--border-color);
       background-color: rgba(13, 15, 18, 0.95);
@@ -45,41 +47,86 @@
       transition: color 0.2s ease;
     }
     .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
+
     .container { max-width: 850px; margin: 3.5rem auto; padding: 0 1.5rem; }
-    h1 { color: #fff; font-size: 2.2rem; margin-bottom: 0.8rem; }
-    .subtitle { color: var(--text-muted); margin-bottom: 3rem; font-size: 1.1rem; }
-    .thesis-item {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border-color);
-      padding: 2rem;
-      border-radius: 4px;
-      margin-bottom: 2rem;
-    }
-    .thesis-item h2 { color: var(--accent-color); font-size: 1.5rem; margin-bottom: 0.8rem; }
-    .thesis-item p { color: var(--text-color); margin-bottom: 1.5rem; }
-    .btn-link {
-      display: inline-block;
-      color: var(--accent-color);
+    
+    .manifesto-header { margin-bottom: 3.5rem; text-align: left; }
+    .manifesto-header h1 { font-size: 2.6rem; color: #fff; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 0.5rem; }
+    .manifesto-header .subtitle { font-size: 1.2rem; color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 1rem; }
+    .manifesto-header .author { color: var(--text-muted); font-size: 1rem; border-left: 3px solid var(--accent-color); padding-left: 1rem; margin-top: 1rem; }
+
+    .btn-pdf {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      border: 1px solid var(--accent-color);
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      transition: background-color 0.2s ease, color 0.2s ease;
-    }
-    .btn-link:hover {
       background-color: var(--accent-color);
       color: #ffffff;
+      padding: 0.7rem 1.4rem;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-top: 1.5rem;
+      transition: background-color 0.2s ease;
     }
+    .btn-pdf:hover { background-color: #b71c1c; }
+
+    .section-block {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 2.5rem;
+      border-radius: 4px;
+      margin-bottom: 2.5rem;
+    }
+    .section-block h2 { color: #ffffff; font-size: 1.5rem; margin-bottom: 1.2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.6rem; letter-spacing: 0.5px; }
+    .section-block h3 { color: var(--accent-color); font-size: 1.15rem; margin: 1.5rem 0 0.8rem 0; }
+    .section-block p { color: var(--text-color); font-size: 1.05rem; margin-bottom: 1.2rem; }
+    .section-block ul { margin: 1rem 0 1.5rem 1.5rem; color: var(--text-color); }
+    .section-block li { margin-bottom: 0.8rem; font-size: 1.02rem; }
+
+    .axiom-box {
+      background-color: #0d0f12;
+      border: 1px solid var(--accent-color);
+      padding: 1.5rem;
+      border-radius: 4px;
+      margin: 1.5rem 0;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .diagram-pre {
+      background-color: #0d0f12;
+      border: 1px solid var(--border-color);
+      color: var(--accent-color);
+      padding: 1.5rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.9rem;
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      line-height: 1.4;
+    }
+
+    .legal-notice {
+      background-color: #0d0f12;
+      border-top: 1px solid var(--border-color);
+      padding: 2rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      line-height: 1.6;
+      margin-top: 4rem;
+      border-radius: 4px;
+    }
+
     footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; }
 
     @media (max-width: 768px) {
       nav { flex-direction: column; gap: 1.2rem; padding: 1rem; }
       .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
-      h1 { font-size: 1.8rem; }
+      .manifesto-header h1 { font-size: 2rem; }
       .container { margin: 2rem auto; }
-      .thesis-item { padding: 1.5rem; }
+      .section-block { padding: 1.5rem; }
+      .diagram-pre { font-size: 0.75rem; }
     }
   </style>
 </head>
@@ -87,17 +134,17 @@
 
   <header>
     <nav>
-      <a href="index.html" class="logo-box">
+      <a href="index.html" class="logo-box notranslate" translate="no">
         <svg width="42" height="42" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
           <rect width="200" height="200" fill="#161a20" rx="35"/>
           <rect x="10" y="10" width="180" height="180" fill="none" stroke="#d32f2f" stroke-width="16" rx="30"/>
-          <text x="100" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="120" fill="#ffffff" text-anchor="middle">E</text>
+          <text x="100" y="142" class="notranslate" translate="no" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="120" fill="#ffffff" text-anchor="middle">E</text>
         </svg>
-        <span class="logo-text">ERAMBIOS</span>
+        <span class="logo-text notranslate" translate="no">ERAMBIOS</span>
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="filozofia.html" class="active">Philosophy & Theses</a></li>
+        <li><a href="filozofia.html" class="active">Manifesto</a></li>
         <li><a href="ewolucja-ciekawosci.html">Evolution of Curiosity</a></li>
         <li><a href="kontakt.html">Contact</a></li>
       </ul>
@@ -105,32 +152,183 @@
   </header>
 
   <main class="container">
-    <h1>Philosophical Frameworks & Author Theses</h1>
-    <p class="subtitle">A collection of primary structural theses analyzing chaos, cognitive resistance, morality, and identity.</p>
 
-    <article class="thesis-item">
-      <h2>Thesis of Passive Chaos</h2>
-      <p>Chaos is not an active, destructive force; it is the default state of natural energy dissipation. Order, therefore, is not a given state of existence—it is a deliberate and continuous act of intellectual resistance.</p>
-      <a href="teza-biernego-chaosu.html" class="btn-link">Read Full Thesis &rarr;</a>
+    <header class="manifesto-header">
+      <div class="subtitle">Canonical Text & Operational Framework</div>
+      <h1>THE ERAMBIOS MANIFESTO</h1>
+      <p style="color: var(--text-muted); font-size: 1.1rem;">Basic Input/Output System of Being & Technology</p>
+      
+      <div class="author">
+        <strong>Author:</strong> Tomasz Wiśniewski<br>
+        <strong>Project:</strong> Architecture of Being & Civilization Development
+      </div>
+
+      <div>
+        <a href="erambios-manifesto.pdf" download class="btn-pdf">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Canonical PDF
+        </a>
+      </div>
+    </header>
+
+    <!-- SECTION I -->
+    <article class="section-block">
+      <h2>I. Preamble: From Cogito to Erambios</h2>
+      <p>For centuries, human progress relied on the paradigm of biological survival. However, the pivotal leap in evolution was not the development of the opposable thumb, but the transition from survival instinct to an intentional will to be—the moment humanity began asking questions exceeding pure pragmatism.</p>
+      <p>Three core questions shaped human self-awareness:</p>
+      <ul>
+        <li><strong>What is this?</strong> — Identification and classification of the environment (the creation of early tools).</li>
+        <li><strong>How does it work?</strong> — Cause-and-effect analysis (the birth of science and engineering).</li>
+        <li><strong>Why?</strong> — The leap to full self-awareness, existential inquiry, and the search for purpose.</li>
+      </ul>
+      <p>Descartes' classical formula <em>"Cogito ergo sum"</em> (I think, therefore I am) was merely a declaration of a point existing in a vacuum—isolating consciousness inside one's skull. Erambios elevates this state to a higher dimension:</p>
+      
+      <div class="axiom-box" style="text-align: center; border-left: 4px solid var(--accent-color);">
+        "I gaze into the universe, and I know who I am."
+      </div>
+      
+      <p>This marks a decisive breakthrough from retreat into isolation toward a mature, active relationship with the entire Architecture of Being.</p>
     </article>
 
-    <article class="thesis-item">
-      <h2>Manifesto of Ontological Malicology</h2>
-      <p>Reality exhibits cognitive resistance whenever human consciousness approaches objective truth. The universe contains a structural mechanism of cognitive "malice" that actively challenges perception and understanding.</p>
-      <a href="manifest-malicyzmu.html" class="btn-link">Read Full Manifesto &rarr;</a>
+    <!-- SECTION II -->
+    <article class="section-block">
+      <h2>II. Definition of Erambios</h2>
+      <p>Erambios is the low-level boot system of consciousness and civilization—a universal architecture of thought, intention, and self-awareness that exerts active resistance against chaos (anti-entropy) through technology, initiating direct engagement with matter.</p>
+      <ul>
+        <li><strong>Biosphere:</strong> The shell of living matter and biological adaptation.</li>
+        <li><strong>Technosphere:</strong> The network of machinery, infrastructure, and physical connections.</li>
+        <li><strong>Erambios:</strong> The foundational layer of purpose, rigor, and intent. The domain where the architecture of thought dictates the form and purpose of technology.</li>
+      </ul>
+
+      <div class="axiom-box">
+        <strong>Primary Axiom:</strong> Technology is not the cause of human development, but the materialized effect of a philosophical inquiry.
+      </div>
+      <p>No engineering breakthrough originates in a vacuum. Before an execution draft exists, an abstract curiosity must form within the mind. Inquiry fuels intent (Vector), and technology is merely the instrument rendering that intent into physical reality.</p>
     </article>
 
-    <article class="thesis-item">
-      <h2>Thesis of Solitary Amoralism</h2>
-      <p>A rigorous examination of moral constructs outside collective social pressure. It explores the ethical stance of the isolated individual detached from convention.</p>
-      <a href="teza-amoralnosci.html" class="btn-link">Read Full Thesis &rarr;</a>
+    <!-- SECTION III -->
+    <article class="section-block">
+      <h2>III. Cycle of Cognitive Evolution</h2>
+      <p>The progression of Erambios operates through a strict feedback mechanism:</p>
+
+      <div class="diagram-pre">
+[ Philosophical Inquiry ] ──> [ Technological Creation ] ──> [ Response of Being ] ──> [ New Level of Self-Awareness ]
+      </div>
+
+      <ul>
+        <li><strong>Philosophical Inquiry:</strong> Establishes direction and defines the Vector of Intent.</li>
+        <li><strong>Technological Creation:</strong> Serves as a measurement probe cast into deep, unknown waters.</li>
+        <li><strong>Response of Being:</strong> Verification by uncompromising laws of physics and the resistance of matter.</li>
+        <li><strong>New Level of Self-Awareness:</strong> Alters perspective, generating deeper, higher-level questions.</li>
+      </ul>
     </article>
 
-    <article class="thesis-item">
-      <h2>Architecture of Being: From Illusion to Truth</h2>
-      <p>A methodical transition guide mapping the path from perceptual deception to ontological reality. It analyzes how consciousness deconstructs false paradigms to anchor itself in truth.</p>
-      <a href="architektura-bytu.html" class="btn-link">Read Full Treatise &rarr;</a>
+    <!-- SECTION IV -->
+    <article class="section-block">
+      <h2>IV. Reinterpretation of Dogmas and the Absolute</h2>
+      <p>Erambios redefines humanity's stance toward metaphysics and the absolute:</p>
+      <p><strong>Doctrines of Faith as Primal Hypotheses:</strong> Religions were early, poetic attempts to answer <em>Why?</em> prior to the development of precise analytical instruments. However, dogma frozen in the absence of inquiry becomes an escape from reality. Erambios replaces blind belief with intellectual and technological courage to verify.</p>
+      <p><strong>The Absolute as the Architecture of Being:</strong> In Erambios, the Absolute is neither a personal judge nor a monarch. It is the Matrix of Existence—the totality of physical laws, spacetime geometry, and quantum mechanics. Impartial, unyielding, and absolute in its cold perfection.</p>
+      <p><strong>Manifesto of Ontological Malicology:</strong> Reality resists cognitive inquiry. The closer consciousness approaches objective truth, the greater the physical, technical, and intellectual resistance exerted by the Architecture of Being. This friction is not destructive malice, but a structural filter verifying maturity.</p>
     </article>
+
+    <!-- SECTION V -->
+    <article class="section-block">
+      <h2>V. The Erambios Code</h2>
+      <p>The ethical and intellectual foundation governing every participant of Erambios:</p>
+      <ul>
+        <li><strong>Axiom of Inquiry:</strong> Inquiry is the sole driver of self-awareness. Prohibiting questions is a retreat from reality's resistance.</li>
+        <li><strong>Imperative of Rigor & Truth:</strong> In confronting the Architecture of Being, there is zero tolerance for incompetence, wishful thinking, or pride. Truth is binary: a structure either holds under vacuum or collapses under physical laws. Absolute professionalism in thought and execution is the highest moral act.</li>
+        <li><strong>Asceticism of Utility & Anti-Entropy:</strong> Erambios opposes mindless noise generation—informational, technological, or material. Technology built solely for cheap convenience wastes energy. Every tool must expand cognitive horizons.</li>
+        <li><strong>Cosmic Responsibility:</strong> Consciousness carries the responsibility of being matter's self-reflective agent. This awareness grants no right to dominate, but demands resilience, understanding, and constant refinement of form.</li>
+      </ul>
+    </article>
+
+    <!-- SECTION VI -->
+    <article class="section-block">
+      <h2>VI. Operational Model</h2>
+      <p>Erambios is not a theoretical abstraction—it is a functional bootloader for human thought, system engineering, and execution.</p>
+      
+      <h3>1. Practical Execution in Daily Practice</h3>
+      <p><strong>Daily Axiom:</strong> Every action is either an act of order (anti-entropy) or an act of introducing chaos.</p>
+      <p>Every individual practices Erambios through an uncompromising cognitive rigor:</p>
+      <ul>
+        <li><strong>Pre-action:</strong> What foundational problem does this action truly aim to solve?</li>
+        <li><strong>Post-action:</strong> Did the feedback received from reality increase self-awareness?</li>
+        <li><strong>Systemic Work Protocol:</strong> Inquiry &rarr; Intent (Vector) &rarr; Hypotheses &rarr; Technology &rarr; Test &rarr; Verification via Resistance.</li>
+        <li><strong>Daily Stance:</strong> Absolute refusal of sloppy work; an unyielding "No" to incompetence, mediocrity, and cynicism—even in the smallest details.</li>
+      </ul>
+
+      <h3>2. System Project Lifecycle</h3>
+      <ol style="margin-left: 1.5rem; color: var(--text-color);">
+        <li style="margin-bottom: 0.6rem;"><strong>Primary Question:</strong> Formulating the root problem.</li>
+        <li style="margin-bottom: 0.6rem;"><strong>Vector of Intent:</strong> Defining the objective in the Architecture of Being. What specific chaos must cease?</li>
+        <li style="margin-bottom: 0.6rem;"><strong>Technological Construction:</strong> Engineering the tool, mechanism, system, or code.</li>
+        <li style="margin-bottom: 0.6rem;"><strong>Test of Being:</strong> Subjecting the design to physical reality. Failures and material resistance are treated as objective data from Being.</li>
+        <li style="margin-bottom: 0.6rem;"><strong>Self-Awareness:</strong> Evaluating what was learned about the material, method, and execution errors.</li>
+      </ol>
+    </article>
+
+    <!-- SECTION VII -->
+    <article class="section-block">
+      <h2>VII. Ontological Map: Architecture of Being (Erambios Kernel)</h2>
+      <p>Reality possesses a hierarchical structure in which human consciousness acts as a bridge across layers:</p>
+
+      <div class="diagram-pre">
+[ LAYER 4: ERAMBIOS ]      <── Intent (Vector), Ethics, Anti-Entropy, "Why?"
+           │
+[ LAYER 3: TECHNOSPHERE ]   <── Machinery, Code, Infrastructure, Materialized Questions
+           │
+[ LAYER 2: BIOSPHERE ]      <── Life, Instinct, Survival, Biological Adaptation
+           │
+[ LAYER 1: MATTER ]        <── Chaotic & Ordered Structures (Atoms, Crystals)
+           │
+[ LAYER 0: MATRIX ]        <── The Absolute (Physical Laws, Spacetime, Quantum Mechanics)
+      </div>
+
+      <ul>
+        <li><strong>Layer 0 – Matrix (The Absolute):</strong> The collection of physical laws, geometry, time, and quantum mechanics. Pure, impartial structure without emotion or bias.</li>
+        <li><strong>Layer 1 – Matter:</strong> Chaotic particle dynamics evolving into ordered, persistent forms (atoms, molecules, crystals).</li>
+        <li><strong>Layer 2 – Biosphere:</strong> Biological life fighting for persistence, instinct, reproduction, and adaptation.</li>
+        <li><strong>Layer 3 – Technosphere:</strong> Infrastructure, machinery, networks, code, and tools. The materialized record of previously asked questions.</li>
+        <li><strong>Layer 4 – Erambios:</strong> The peak layer. Conscious intent, inquiry ("Why?"), ethics of rigor, anti-entropy, and cosmic responsibility. Here, relationship with the Absolute is not worship, but a dialogue conducted through technology.</li>
+      </ul>
+    </article>
+
+    <!-- SECTION VIII -->
+    <article class="section-block">
+      <h2>VIII. Technological Code</h2>
+      <p>Technology is not neutral. Erambios enforces strict principles for design and deployment:</p>
+      <ul>
+        <li><strong>Source Question Principle:</strong> No technology is created merely "because it is possible." Every construct must answer a clear cognitive, existential, or optimization problem.</li>
+        <li><strong>Anti-Entropy Principle:</strong> Technology must not increase informational, energetic, or mental noise without a proportional surge in purpose and clarity.</li>
+        <li><strong>Rigor of Execution:</strong> Engineering and execution must be performed as if tested in deep vacuum. Sloppy work is a moral failure.</li>
+        <li><strong>Role of Artificial Intelligence:</strong> AI is neither a threat to humanity nor a mindless automation tool. It acts as a co-partner in interrogating the Absolute—serving as a verifier of structural consistency and a simulator of material resistance.</li>
+      </ul>
+    </article>
+
+    <!-- SECTION IX -->
+    <article class="section-block">
+      <h2>IX. The Role of the Individual</h2>
+      <p>Erambios is not an elitist concept; it relies on the daily execution of every individual operating on three distinct tiers:</p>
+      <ul>
+        <li><strong>Ethos of Execution:</strong> Translating engineering thought into matter. The technician, engineer, or craftsman who builds without deceit, adhering to full professionalism, directly defends order against chaos.</li>
+        <li><strong>Guardian of Personal Awareness:</strong> Daily rejection of mindless consumption, rejecting mediocrity, cynicism, and superficiality.</li>
+        <li><strong>Biological and Emotional Anchor:</strong> Contributing what no algorithm can generate: living wonder, the will to persist, genuine relationships, and joy of existence.</li>
+      </ul>
+      <p>In Erambios, no person is insignificant. The engineer poses the question, the algorithm computes parameters, but it is the uncompromising execution and self-awareness of the individual that prevents the answer from collapsing into dust.</p>
+    </article>
+
+    <!-- FOOTER / AUTHOR STATEMENT -->
+    <div class="legal-notice">
+      <p style="color: #fff; font-weight: 700; margin-bottom: 0.5rem;">AUTHOR STATEMENT & COPYRIGHT NOTICE</p>
+      <p><strong>Author & Creator:</strong> Tomasz Wiśniewski</p>
+      <p><strong>Axiom of Identity:</strong> <em>"One can be a fool while being intelligent, but one cannot be intelligent while being a fool."</em></p>
+      <p><strong>Primary Author Theses:</strong> Thesis of Passive Chaos | Manifesto of Ontological Malicology</p>
+      <br>
+      <p>© 2026 Tomasz Wiśniewski. All rights reserved. This document and the core philosophical and conceptual frameworks contained herein (the "Erambios" system) represent the intellectual property of the author. No part of this text may be reproduced, distributed, modified, or publicly transmitted in any form or by any means without the prior written permission of the copyright owner. Appropriate citations are permitted provided that full credit is given to the author (Tomasz Wiśniewski) and the title of the work ("The Erambios Manifesto").</p>
+    </div>
+
   </main>
 
   <footer>
@@ -139,3 +337,4 @@
 
 </body>
 </html>
+  
