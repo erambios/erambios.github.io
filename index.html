@@ -20,6 +20,34 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.7;
     }
+
+    /* PEŁNOEKRANOWE INTRO WIDEO */
+    #video-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #0d0f12;
+      z-index: 99999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.8s ease, visibility 0.8s ease;
+    }
+
+    #video-overlay.fade-out {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    #intro-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* STRUKTURA NAWIGACJI I STRONY */
     header {
       border-bottom: 1px solid var(--border-color);
       background-color: rgba(13, 15, 18, 0.95);
@@ -96,6 +124,14 @@
 </head>
 <body>
 
+  <!-- NAKŁADKA Z INTRO WIDEO -->
+  <div id="video-overlay">
+    <video id="intro-video" autoplay muted playsinline>
+      <source src="intro.mp4" type="video/mp4">
+      Twoja przeglądarka nie obsługuje wideo.
+    </video>
+  </div>
+
   <header>
     <nav>
       <a href="index.html" class="logo-box">
@@ -142,6 +178,24 @@
   <footer>
     <p>&copy; 2026 Erambios.org — All rights reserved.</p>
   </footer>
+
+  <!-- SKRYPT ZARZĄDZAJĄCY INTRO -->
+  <script>
+    const video = document.getElementById('intro-video');
+    const overlay = document.getElementById('video-overlay');
+
+    if (video && overlay) {
+      // Po zakończeniu odtwarzania wideo płynnie zanika
+      video.addEventListener('ended', () => {
+        overlay.classList.add('fade-out');
+      });
+
+      // Zabezpieczenie: usunięcie nakładki po 10 sekundach
+      setTimeout(() => {
+        overlay.classList.add('fade-out');
+      }, 10000);
+    }
+  </script>
 
 </body>
 </html>
