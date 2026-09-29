@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thesis of Passive Chaos – Erambios</title>
+  <style>
+    :root {
+      --bg-color: #0d0f12;
+      --card-bg: #161a20;
+      --accent-color: #c9a050;
+      --text-color: #e1e6ed;
+      --text-muted: #8b949e;
+      --border-color: #21262d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: var(--bg-color); color: var(--text-color); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.8; }
+    header { border-bottom: 1px solid var(--border-color); background-color: rgba(13, 15, 18, 0.95); position: sticky; top: 0; z-index: 1000; }
+    nav { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem; }
+    .logo { font-size: 1.4rem; font-weight: 700; color: var(--accent-color); text-decoration: none; letter-spacing: 2px; }
+    .nav-links { display: flex; list-style: none; gap: 1.8rem; }
+    .nav-links a { color: var(--text-color); text-decoration: none; font-size: 0.95rem; }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
+    .container { max-width: 800px; margin: 3rem auto; padding: 0 1.5rem; }
+    .back-link { display: inline-block; color: var(--accent-color); text-decoration: none; font-size: 0.9rem; margin-bottom: 2rem; font-weight: 600; }
+    .back-link:hover { text-decoration: underline; }
+    h1 { color: #fff; font-size: 2.4rem; margin-bottom: 0.5rem; }
+    .meta { color: var(--accent-color); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2.5rem; display: block; }
+    .content-box { background-color: var(--card-bg); border: 1px solid var(--border-color); padding: 3rem; border-radius: 6px; }
+    .content-box p { margin-bottom: 1.5rem; color: var(--text-color); font-size: 1.05rem; }
+    footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; }
+    @media (max-width: 768px) {
+      nav { flex-direction: column; gap: 1rem; padding: 1rem; }
+      .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+      .container { margin: 1.5rem auto; padding: 0 1rem; }
+      .content-box { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo">ERAMBIOS</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="filozofia.html" class="active">Philosophy & Theses</a></li>
+        <li><a href="ewolucja-ciekawosci.html">Evolution of Curiosity</a></li>
+        <li><a href="kontakt.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <a href="filozofia.html" class="back-link">&larr; Back to Philosophy & Theses</a>
+    
+    <h1>Thesis of Passive Chaos</h1>
+    <span class="meta">Core Authorial Thesis</span>
+
+    <article class="content-box">
+      <p>Chaos is not an active, malicious, or destructive force operating within the universe; rather, it represents the default, neutral state of natural energy dissipation. It is the baseline reality of unguided existence—a constant movement toward entropy when external structure is absent.</p>
+
+      <p>Because chaos is inherently passive, order cannot occur spontaneously or sustain itself without effort. Every structure, every system of logic, and every moral architecture is an active act of intellectual and existential resistance against this natural dissipation.</p>
+
+      <p>To establish order is to wage a deliberate battle against the passive gravity of reality. Reason and consciousness serve as the primary mechanisms through which order asserts itself against the indifferent tide of chaos.</p>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Erambios.org — All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
