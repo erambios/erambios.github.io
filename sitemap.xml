@@ -1,9 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Strona Główna -->
   <url>
     <loc>https://erambios.org/</loc>
-    <lastmod>2026-09-27</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Tezy Filozoficzne -->
+  <url>
+    <loc>https://erambios.org/tezy.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Manifest Ontologicznego Malicyzmu -->
+  <url>
+    <loc>https://erambios.org/manifest-ontologicznego-malicyzmu.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Triada Pytań / Książka -->
+  <url>
+    <loc>https://erambios.org/triada-pytan.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Epilog -->
+  <url>
+    <loc>https://erambios.org/epilog.html</loc>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
