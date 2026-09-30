@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thesis of Solitary Amoralism – Erambios</title>
+  
+  <!-- FAVICON -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
   <style>
     :root {
       --bg-color: #0d0f12;
@@ -14,27 +18,77 @@
       --border-color: #21262d;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background-color: var(--bg-color); color: var(--text-color); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.8; }
-    header { border-bottom: 1px solid var(--border-color); background-color: rgba(13, 15, 18, 0.95); position: sticky; top: 0; z-index: 1000; }
-    nav { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.8;
+    }
+    header {
+      border-bottom: 1px solid var(--border-color);
+      background-color: rgba(13, 15, 18, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
     .logo-box { display: flex; align-items: center; text-decoration: none; }
     .logo-text { color: #ffffff; font-weight: 800; font-size: 1.3rem; letter-spacing: 2.5px; margin-left: 0.9rem; }
     .nav-links { display: flex; list-style: none; gap: 1.8rem; }
     .nav-links a { color: var(--text-color); text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
     .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
-    .container { max-width: 800px; margin: 3.5rem auto; padding: 0 1.5rem; }
-    h1 { color: #fff; font-size: 2.4rem; margin-bottom: 0.5rem; }
-    .meta { color: var(--accent-color); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2.5rem; display: block; font-weight: 700; }
-    .content-box { background-color: var(--card-bg); border: 1px solid var(--border-color); padding: 3rem; border-radius: 4px; }
-    .content-box p { margin-bottom: 1.5rem; color: var(--text-color); font-size: 1.05rem; }
-    .back-link { display: inline-block; margin-top: 2rem; color: var(--accent-color); text-decoration: none; font-weight: 600; }
-    .back-link:hover { text-decoration: underline; }
+    
+    .container { max-width: 850px; margin: 3.5rem auto; padding: 0 1.5rem; }
+    .header-tag { color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.85rem; margin-bottom: 0.5rem; display: block; }
+    h1 { color: #fff; font-size: 2.4rem; margin-bottom: 0.5rem; font-weight: 900; line-height: 1.2; }
+    .meta-info { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1.5rem; }
+    
+    .thesis-content section { margin-bottom: 2.5rem; }
+    .thesis-content h2 { color: #ffffff; font-size: 1.4rem; margin-bottom: 1rem; border-left: 3px solid var(--accent-color); padding-left: 0.8rem; font-weight: 800; }
+    .thesis-content p { color: var(--text-color); margin-bottom: 1.2rem; font-size: 1.05rem; }
+    .thesis-content ul { margin: 1rem 0 1.5rem 1.8rem; color: var(--text-color); }
+    .thesis-content li { margin-bottom: 0.6rem; font-size: 1.02rem; }
+    
+    .axiom-box {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-left: 4px solid var(--accent-color);
+      padding: 1.8rem;
+      border-radius: 4px;
+      margin: 2rem 0;
+    }
+    .axiom-box h3 {
+      color: #ffffff;
+      font-size: 1.15rem;
+      margin-bottom: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .btn-back {
+      display: inline-block;
+      margin-top: 2rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    .btn-back:hover { color: var(--accent-color); }
+
     footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; }
+
     @media (max-width: 768px) {
       nav { flex-direction: column; gap: 1.2rem; padding: 1rem; }
       .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+      h1 { font-size: 1.8rem; }
       .container { margin: 2rem auto; }
-      .content-box { padding: 1.5rem; }
     }
   </style>
 </head>
@@ -42,36 +96,78 @@
 
   <header>
     <nav>
-      <a href="index.html" class="logo-box">
+      <a href="index.html" class="logo-box notranslate" translate="no">
         <svg width="42" height="42" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
           <rect width="200" height="200" fill="#161a20" rx="35"/>
           <rect x="10" y="10" width="180" height="180" fill="none" stroke="#d32f2f" stroke-width="16" rx="30"/>
-          <text x="100" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="120" fill="#ffffff" text-anchor="middle">E</text>
+          <text x="100" y="142" class="notranslate" translate="no" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="120" fill="#ffffff" text-anchor="middle">E</text>
         </svg>
-        <span class="logo-text">ERAMBIOS</span>
+        <span class="logo-text notranslate" translate="no">ERAMBIOS</span>
       </a>
       <ul class="nav-links">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="filozofia.html">Manifesto</a></li>
-  <li><a href="tezy.html">Theses</a></li>
-  <li><a href="ewolucja-ciekawosci.html">Evolution of Curiosity</a></li>
-  <li><a href="kontakt.html">Contact</a></li>
-</ul>
-
+        <li><a href="index.html">Home</a></li>
+        <li><a href="filozofia.html">Manifesto</a></li>
+        <li><a href="tezy.html" class="active">Theses</a></li>
+        <li><a href="ewolucja-ciekawosci.html">Evolution of Curiosity</a></li>
+        <li><a href="kontakt.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
   <main class="container">
+    <span class="header-tag">Canonical Philosophical Thesis</span>
     <h1>Thesis of Solitary Amoralism</h1>
-    <span class="meta">Ethics Detached From Collective Pressure</span>
+    <p class="meta-info">Axiom of Relational Law, Ontological Rigor, and the Absolute | Author: Tom Nesky</p>
 
-    <article class="content-box">
-      <p>Morality is fundamentally a social contract created to regulate human interaction within a collective. Solitary Amoralism examines the cognitive stance of an individual stripped of societal constructs.</p>
-      
-      <p>In total isolation, conventional concepts of moral good and evil dissolve, leaving behind only purpose, cause, and direct consequence.</p>
+    article class="thesis-content">
+      <section>
+        <h2>Main Formulation</h2>
+        <p>Law, social morality, and the concept of crime are not inherent properties of reality, but artificial products of interpersonal relationships (transactional morality). Every social system by definition breeds its own resistance, and total liberation beyond good and evil exists exclusively where Being is free from the presence of the Other.</p>
+        <p>However, the abolition of social morality in a solitary state does not signify the abolition of all rigor—it is merely the casting off of foreign matrices. The individual, free from a witness, ceases to be subject to ethical judgments, standing directly before Ontological Rigor: the choice between actively imposing form upon one's own Being or decomposing in Passive Chaos.</p>
+      </section>
 
-      <a href="filozofia.html" class="back-link">&larr; Back to Philosophy & Theses</a>
+      <section>
+        <h2>Intellectual Pillars of the Thesis</h2>
+
+        <p><strong>I. Construction of Crime (Nullum Crimen Sine Systema)</strong><br>
+        Socio-moral law does not discover evil—it calls it into existence. Drawing a line in the chaos of relations establishes a boundary, and every boundary immediately creates the notion of its transgression. Human action becomes a "crime" or a "sin" only at the moment it collides with a written or unwritten matrix imposed by a community, monarch, or technocratic structure.</p>
+
+        <p><strong>II. Paradox of the Systemic Cage</strong><br>
+        Man living in a collective is trapped in the necessity of creating rules. Every attempt to negate the system—from invoking anarchy to escaping to the middle of the ocean—instantly becomes a new system defined by the principle of resistance. Freedom defined solely as "absence of social rules" transforms into a harsh dictate to maintain that absence. There is no escape from the social system using relational rules alone.</p>
+
+        <p><strong>III. Abolition of the Mirror (L'Autre) and Erasure of Transaction</strong><br>
+        Good and evil in an ethical sense require a witness, a recipient, and a judge. Social morality is exclusively a transaction and a mirror in which we observe ourselves through the eyes of another. Removing the social fabric erases these concepts:</p>
+        <ul>
+          <li>Without property — there is no theft.</li>
+          <li>Without another human being — there is no harm nor sin.</li>
+          <li>Without a code — there is no criminal.</li>
+        </ul>
+        <p>The individual is liberated from external moralizing, false guilt, and entanglement caused by a thickening population.</p>
+
+        <p><strong>IV. State of Pure Existence and Physics of Will</strong><br>
+        An individual deprived of social context (considered in absolute isolation) is neither good nor bad. They abide in a state of pure ontological amoralism. Yet this is neither a state of passive void nor a license for inertia.</p>
+        <p>In place of vanishing relational morality, the Physics of Will manifests. The universe by default tends toward dispersion (Passive Chaos) and resists inquiry and endurance (Ontological Malicology). The absence of a judge does not relieve Being from the dynamics of existence:</p>
+        <ul>
+          <li>Lack of discipline, failure to forge spirit and body, or surrendering to passivity in solitude are not "sins" (for there is no one to sin against)—they are structural degradation.</li>
+          <li>Self-forging, rigor, and unaddressed virtue become the internal architecture of the individual. They serve neither salvation nor applause, but stand as an act of intellectual and physical resistance against the chaos of reality.</li>
+        </ul>
+      </section>
+
+      <section>
+        <div class="axiom-box">
+          <h3>Conclusion: Axiom of Solitary Rigor</h3>
+          <p>Sin, crime, and relational virtue are purely social currency. Civilization created codes to bind the chaos of the population, but the price for this order was the loss of the primary sovereignty of Being. True freedom lies not in fighting social law, but in a state where this law loses its raison d'être for lack of the Other.</p>
+          <p>Yet freedom from foreign laws is merely a purgatory—a battlefield where the sole lawgiver, judge, and executioner becomes one's own Will. The absence of an external code does not reduce the individual to arbitrariness, but imposes Ontological Rigor upon them: the duty to constantly impose form upon oneself.</p>
+        </div>
+
+        <div class="axiom-box">
+          <h3>Axiom of the Solitary Absolute</h3>
+          <p>Removing social relations and erasing moral dualism elevates the sovereign individual to the rank of the Absolute. Being, unsubjected to the category of external opposites and determining the boundaries of its own rigor, becomes its own Alpha and Omega—the absolute origin, purpose, and foundation of its own reality.</p>
+        </div>
+      </section>
     </article>
+
+    <a href="tezy.html" class="btn-back">&larr; Back to Philosophical Theses</a>
   </main>
 
   <footer>
