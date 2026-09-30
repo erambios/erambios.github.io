@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thesis of Passive Chaos – Erambios</title>
+  
+  <!-- FAVICON -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
   <style>
     :root {
       --bg-color: #0d0f12;
@@ -14,27 +18,78 @@
       --border-color: #21262d;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background-color: var(--bg-color); color: var(--text-color); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.8; }
-    header { border-bottom: 1px solid var(--border-color); background-color: rgba(13, 15, 18, 0.95); position: sticky; top: 0; z-index: 1000; }
-    nav { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.8;
+    }
+    header {
+      border-bottom: 1px solid var(--border-color);
+      background-color: rgba(13, 15, 18, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
     .logo-box { display: flex; align-items: center; text-decoration: none; }
     .logo-text { color: #ffffff; font-weight: 800; font-size: 1.3rem; letter-spacing: 2.5px; margin-left: 0.9rem; }
     .nav-links { display: flex; list-style: none; gap: 1.8rem; }
     .nav-links a { color: var(--text-color); text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
     .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
-    .container { max-width: 800px; margin: 3.5rem auto; padding: 0 1.5rem; }
-    h1 { color: #fff; font-size: 2.4rem; margin-bottom: 0.5rem; }
-    .meta { color: var(--accent-color); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2.5rem; display: block; font-weight: 700; }
-    .content-box { background-color: var(--card-bg); border: 1px solid var(--border-color); padding: 3rem; border-radius: 4px; }
-    .content-box p { margin-bottom: 1.5rem; color: var(--text-color); font-size: 1.05rem; }
-    .back-link { display: inline-block; margin-top: 2rem; color: var(--accent-color); text-decoration: none; font-weight: 600; }
-    .back-link:hover { text-decoration: underline; }
+    
+    .container { max-width: 850px; margin: 3.5rem auto; padding: 0 1.5rem; }
+    .header-tag { color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.85rem; margin-bottom: 0.5rem; display: block; }
+    h1 { color: #fff; font-size: 2.4rem; margin-bottom: 0.5rem; font-weight: 900; line-height: 1.2; }
+    .meta-info { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1.5rem; }
+    
+    .thesis-content section { margin-bottom: 2.5rem; }
+    .thesis-content h2 { color: #ffffff; font-size: 1.4rem; margin-bottom: 1rem; border-left: 3px solid var(--accent-color); padding-left: 0.8rem; font-weight: 800; }
+    .thesis-content p { color: var(--text-color); margin-bottom: 1.2rem; font-size: 1.05rem; }
+    .thesis-content ul { margin: 1rem 0 1.5rem 1.8rem; color: var(--text-color); }
+    .thesis-content li { margin-bottom: 0.6rem; font-size: 1.02rem; }
+    
+    .equation-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 1.8rem;
+      border-radius: 4px;
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .equation-text {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--accent-color);
+      letter-spacing: 2px;
+      font-family: monospace;
+    }
+
+    .btn-back {
+      display: inline-block;
+      margin-top: 2rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    .btn-back:hover { color: var(--accent-color); }
+
     footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; }
+
     @media (max-width: 768px) {
       nav { flex-direction: column; gap: 1.2rem; padding: 1rem; }
       .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+      h1 { font-size: 1.8rem; }
       .container { margin: 2rem auto; }
-      .content-box { padding: 1.5rem; }
+      .equation-text { font-size: 1.2rem; }
     }
   </style>
 </head>
@@ -42,36 +97,82 @@
 
   <header>
     <nav>
-      <a href="index.html" class="logo-box">
+      <a href="index.html" class="logo-box notranslate" translate="no">
         <svg width="42" height="42" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
           <rect width="200" height="200" fill="#161a20" rx="35"/>
           <rect x="10" y="10" width="180" height="180" fill="none" stroke="#d32f2f" stroke-width="16" rx="30"/>
-          <text x="100" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="120" fill="#ffffff" text-anchor="middle">E</text>
+          <text x="100" y="142" class="notranslate" translate="no" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="120" fill="#ffffff" text-anchor="middle">E</text>
         </svg>
-        <span class="logo-text">ERAMBIOS</span>
+        <span class="logo-text notranslate" translate="no">ERAMBIOS</span>
       </a>
       <ul class="nav-links">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="filozofia.html">Manifesto</a></li>
-  <li><a href="tezy.html">Theses</a></li>
-  <li><a href="ewolucja-ciekawosci.html">Evolution of Curiosity</a></li>
-  <li><a href="kontakt.html">Contact</a></li>
-</ul>
-
+        <li><a href="index.html">Home</a></li>
+        <li><a href="filozofia.html">Manifesto</a></li>
+        <li><a href="tezy.html" class="active">Theses</a></li>
+        <li><a href="ewolucja-ciekawosci.html">Evolution of Curiosity</a></li>
+        <li><a href="kontakt.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
   <main class="container">
+    <span class="header-tag">Canonical Philosophical Thesis</span>
     <h1>Thesis of Passive Chaos</h1>
-    <span class="meta">Ontological Dissipation & The Act of Resistance</span>
+    <p class="meta-info">Sub-framework: Geometry of Fate, Tangential Determinism, and the Craftsman's Rigor | Author: Tom Nesky</p>
 
-    <article class="content-box">
-      <p>Chaos is not a malignant, calculating entity striving to tear down structure; it is merely the default, passive state of physical and intellectual reality when conscious energy ceases to exert control.</p>
-      
-      <p>Left unmaintained, systems revert naturally toward maximum entropy. Therefore, order is never a natural baseline—it is a conscious, continuous, and defiant act of intellectual resistance against passive dissipation.</p>
+    <article class="thesis-content">
+      <section>
+        <h2>I. Definition of Order and the Ontological Warp</h2>
+        <p>Chaos is not an absence of order, but an overarching, impersonal geometry of Being that cannot be perceived from close proximity. Contrary to illusions regarding the randomness of life or the moral purpose of the cosmos, reality is a hard axis upon which fixed, irrevocable event-points are placed.</p>
+        <p>These points do not come into existence at the moment they are experienced—they are already present, encoded in the physics of matter, the structure of DNA, biology, and ancestral history. In a world liberated from foreign matrices (Thesis of Solitary Amoralism), this line is neither a judge’s sentence nor a punishment for sins, but the physical warp of reality upon which a sovereign individual forged their form.</p>
+      </section>
 
-      <a href="filozofia.html" class="back-link">&larr; Back to Philosophy & Theses</a>
+      <section>
+        <h2>II. Equation of Existence Dynamics (Physics of Will)</h2>
+        <p>The relationship between the individual and the irrevocable geometry of fate is described by the authorial equation of existential mechanics:</p>
+        
+        <div class="equation-card">
+          <span class="equation-text">MASS - VELOCITY = FORCE</span>
+        </div>
+
+        <ul>
+          <li><strong>Mass (Event / Objective Being):</strong> Every point on the line carries its own weight. These are accomplished facts, biology, external circumstances, and the pressure of Ontological Malicology and Passive Chaos. Mass is unyielding—it is not subject to negotiation, regret, or moral evaluations.</li>
+          <li><strong>Velocity (Pure Acceptance and Non-Resistance):</strong> The efficiency with which Being moves along the designated axis. It stems from the absolute rejection of transactional moralizing, seeking scapegoats, and the illusion of guilt. The less time and energy wasted on resisting facts, the higher the Velocity achieved.</li>
+          <li><strong>Force (Craftsman's Rigor / Passive Satisfaction):</strong> The vector resultant of this system. It is a state of ontological unflinchability and quiet triumph. This Force allows one to remain on the line with an open visor and cut through matter regardless of the weight of Mass.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>III. Freedom as a Tangential Point (The Erambios Act)</h2>
+        <p>Freedom in the Thesis of Passive Chaos is not childish liberty to stray from the path nor passive drifting. It is a programmed Tangential Point (Point of Contact)—the only real domain of agency for Being.</p>
+        <p>It is the moment when conscious Will impacts the Mass of an event embedded in the structure of the world. True sovereignty and craftsman's maturity manifest in the quality of this collision: in the precision with which the individual, subjected to their own rigor, applies the chisel to the hard wood of reality in this single, relentless second of the present.</p>
+      </section>
+
+      <section>
+        <h2>IV. Pathology of Straying from the Line (Existential Degradation)</h2>
+        <p>Attempting to fight facts, searching for imaginary guilt, lamenting over the past, or escaping into social moralizing is defined as an attempt to stray from the line.</p>
+        <p>Under Solitary Amoralism, straying from the line is not a "sin" against a higher law (for there is no one to sin against). It is a structural design flaw and an invitation to decay. The result of straying is falling into the void between lines—a domain devoid of anchor points and structure. This condition leads inevitably to psychological degradation, loss of will, and madness, as the mind loses contact with the hard program of existence and surrenders ground to Passive Chaos.</p>
+      </section>
+
+      <section>
+        <h2>V. The Craftsman's Stance (Active Passivity and Unaddressed Virtue)</h2>
+        <p>The Sage and the Craftsman expect neither sympathy nor reward from the world. Operating in absolute isolation from the opinion of the Other, they "arm themselves with patience" and iron discipline (The Erambios Manifesto). They understand that:</p>
+        <ul>
+          <li><strong>They cannot alter the past</strong> — because the Mass of events is already solidified in the structure of Being.</li>
+          <li><strong>They cannot outrun the future</strong> — because the chisel can only cut at the point that has arrived right now.</li>
+          <li><strong>The present demands total mobilization</strong> — dictating absolute focus of the Will on the immediate Tangential Point.</li>
+        </ul>
+        <p>Discipline and the hardening of body and mind in solitude do not serve to court approval. They represent an unaddressed virtue—maintaining the pure operational readiness of the chisel.</p>
+      </section>
+
+      <section>
+        <h2>VI. Conclusion: Passive Satisfaction and the Autonomy of the Absolute</h2>
+        <p>The ultimate goal is to achieve Passive Satisfaction—a austere, quiet triumph of the observer and the executor in a single entity. The individual, liberated from the falsehood of social codes, accepts their own line, understands the "alien entity within," and traverses reality with maximum Velocity and minimal internal friction.</p>
+        <p>An error in action is not a moral failure, but a signal of poor contact between the chisel and the material. The only path to recovery and maintaining alignment is a return to the designated rhythm—to Ontological Rigor, where man, being their own Alpha and Omega, becomes the Craftsman of their own Being.</p>
+      </section>
     </article>
+
+    <a href="tezy.html" class="btn-back">&larr; Back to Philosophical Theses</a>
   </main>
 
   <footer>
