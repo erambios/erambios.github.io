@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Architecture of Being – Erambios</title>
+  <title>Architecture of Being: From Illusion to Truth – Erambios</title>
+  
+  <!-- FAVICON -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
   <style>
     :root {
       --bg-color: #0d0f12;
@@ -14,27 +18,95 @@
       --border-color: #21262d;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background-color: var(--bg-color); color: var(--text-color); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.8; }
-    header { border-bottom: 1px solid var(--border-color); background-color: rgba(13, 15, 18, 0.95); position: sticky; top: 0; z-index: 1000; }
-    nav { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.8;
+    }
+    header {
+      border-bottom: 1px solid var(--border-color);
+      background-color: rgba(13, 15, 18, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
     .logo-box { display: flex; align-items: center; text-decoration: none; }
     .logo-text { color: #ffffff; font-weight: 800; font-size: 1.3rem; letter-spacing: 2.5px; margin-left: 0.9rem; }
     .nav-links { display: flex; list-style: none; gap: 1.8rem; }
     .nav-links a { color: var(--text-color); text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
     .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
-    .container { max-width: 800px; margin: 3.5rem auto; padding: 0 1.5rem; }
-    h1 { color: #fff; font-size: 2.4rem; margin-bottom: 0.5rem; }
-    .meta { color: var(--accent-color); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2.5rem; display: block; font-weight: 700; }
-    .content-box { background-color: var(--card-bg); border: 1px solid var(--border-color); padding: 3rem; border-radius: 4px; }
-    .content-box p { margin-bottom: 1.5rem; color: var(--text-color); font-size: 1.05rem; }
-    .back-link { display: inline-block; margin-top: 2rem; color: var(--accent-color); text-decoration: none; font-weight: 600; }
-    .back-link:hover { text-decoration: underline; }
+    
+    .container { max-width: 850px; margin: 3.5rem auto; padding: 0 1.5rem; }
+    .header-tag { color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.85rem; margin-bottom: 0.5rem; display: block; }
+    h1 { color: #fff; font-size: 2.4rem; margin-bottom: 0.5rem; font-weight: 900; line-height: 1.2; }
+    .meta-info { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1.5rem; }
+    
+    .thesis-content section { margin-bottom: 2.5rem; }
+    .thesis-content h2 { color: #ffffff; font-size: 1.4rem; margin-bottom: 1rem; border-left: 3px solid var(--accent-color); padding-left: 0.8rem; font-weight: 800; }
+    .thesis-content p { color: var(--text-color); margin-bottom: 1.2rem; font-size: 1.05rem; }
+    .thesis-content ul { margin: 1rem 0 1.5rem 1.8rem; color: var(--text-color); }
+    .thesis-content li { margin-bottom: 0.6rem; font-size: 1.02rem; }
+    
+    /* SCHEMAT ARCHITEKTURY */
+    .diagram-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-left: 4px solid var(--accent-color);
+      padding: 2rem;
+      border-radius: 4px;
+      margin: 2rem 0;
+      font-family: monospace;
+    }
+    .diagram-step {
+      margin-bottom: 1.5rem;
+    }
+    .diagram-step:last-child {
+      margin-bottom: 0;
+    }
+    .diagram-title {
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+    .diagram-arrow {
+      color: var(--accent-color);
+      font-size: 0.9rem;
+      margin: 0.4rem 0 0.4rem 1rem;
+    }
+    .diagram-desc {
+      color: var(--text-muted);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 0.95rem;
+      margin-left: 1.5rem;
+    }
+
+    .btn-back {
+      display: inline-block;
+      margin-top: 2rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    .btn-back:hover { color: var(--accent-color); }
+
     footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; }
+
     @media (max-width: 768px) {
       nav { flex-direction: column; gap: 1.2rem; padding: 1rem; }
       .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+      h1 { font-size: 1.8rem; }
       .container { margin: 2rem auto; }
-      .content-box { padding: 1.5rem; }
     }
   </style>
 </head>
@@ -42,36 +114,91 @@
 
   <header>
     <nav>
-      <a href="index.html" class="logo-box">
+      <a href="index.html" class="logo-box notranslate" translate="no">
         <svg width="42" height="42" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
           <rect width="200" height="200" fill="#161a20" rx="35"/>
           <rect x="10" y="10" width="180" height="180" fill="none" stroke="#d32f2f" stroke-width="16" rx="30"/>
-          <text x="100" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="120" fill="#ffffff" text-anchor="middle">E</text>
+          <text x="100" y="142" class="notranslate" translate="no" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="120" fill="#ffffff" text-anchor="middle">E</text>
         </svg>
-        <span class="logo-text">ERAMBIOS</span>
+        <span class="logo-text notranslate" translate="no">ERAMBIOS</span>
       </a>
       <ul class="nav-links">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="filozofia.html">Manifesto</a></li>
-  <li><a href="tezy.html">Theses</a></li>
-  <li><a href="ewolucja-ciekawosci.html">Evolution of Curiosity</a></li>
-  <li><a href="kontakt.html">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="filozofia.html">Manifesto</a></li>
+        <li><a href="tezy.html" class="active">Theses</a></li>
+        <li><a href="ewolucja-ciekawosci.html">Evolution of Curiosity</a></li>
+        <li><a href="kontakt.html">Contact</a></li>
       </ul>
-      
     </nav>
   </header>
 
   <main class="container">
-    <h1>Architecture of Being</h1>
-    <span class="meta">From Illusion to Ontological Truth</span>
+    <span class="header-tag">Canonical Philosophical Thesis</span>
+    <h1>Architecture of Being: From Illusion to Truth</h1>
+    <p class="meta-info">Structural Framework of Existence, Anti-Entropy, and the Matrix of Existence | Author: Tom Nesky</p>
 
-    <article class="content-box">
-      <p>The Architecture of Being maps the transition of human perception from inherited cultural illusions to objective ontological clarity.</p>
-      
-      <p>By dismantling unexamined assumptions, consciousness erects a rigorous internal framework capable of standing firm against psychological and cultural entropy.</p>
+    <article class="thesis-content">
+      <section>
+        <h2>I. Initial Condition: Man in the Embrace of Passive Chaos</h2>
+        <p>Man does not enter a structured, ready-made, or hospitable world. In accordance with the Thesis of Passive Chaos, the natural state of the universe is a slow, inert dispersion of energy—unreflective entropy. The world in itself possesses no inherent purpose, embedded care, or pre-packaged value matrix.</p>
+        <p>In this environment, the greatest trap for man is illusion. Illusion, however, is not a sensory error; illusion is passivity. It is a state of deceptive comfort in which man surrenders their agency, accepting unreflective drift as the natural order of things. Living in illusion, man becomes merely a passive object drifting amidst chaos—losing the status of an agent, while their existence undergoes gradual decomposition.</p>
+      </section>
 
-      <a href="filozofia.html" class="back-link">&larr; Back to Philosophy & Theses</a>
+      <section>
+        <h2>II. Awakening of the Agent: Existential Inquiry and Erambios Rigor</h2>
+        <p>The struggle begins at the moment of an existential rupture. Man, as the sole entity within the known structure of the world, possesses the capacity to become aware of their own finitude and the absurdity of passive endurance. It is within human consciousness that the fundamental question of meaning is born—a question that becomes the spark igniting revolt against entropy.</p>
+        <p>This awakening demands a tool and a stance defined by The Erambios Manifesto:</p>
+        <ul>
+          <li><strong>Man as an Anti-Entropy Agent:</strong> Order does not arise spontaneously. Every manifestation of meaning, harmony, or endurance is the direct consequence of expended human energy, will, and intellectual rigor.</li>
+          <li><strong>The Weapon of Rigor and Craft:</strong> Human response to chaos is not a superficial declaration, but an uncompromising quality of thought and action. Creative work, intellectual effort, technical precision, and craftsmanship become the materialized act of human revolt. Man ceases to be an observer; they become the Engineer of Being.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>III. Confrontation with the Matrix of Existence: Truth as Material Resistance</h2>
+        <p>The transition from illusion to truth is not an act of pure, abstract contemplation. It occurs exclusively through direct struggle. Reality—the objective Matrix of Existence—yields neither to wishful thinking nor to unrealized ideas.</p>
+        <ul>
+          <li><strong>Confrontation:</strong> Man introduces their intent and conceptual framework into the world, but immediately encounters a hard boundary.</li>
+          <li><strong>Truth as Resistance:</strong> Truth is neither a poetic ideal nor the absence of shadow. Truth manifests in the resistance that matter and logic exert against human action. It is the threshold where an abstract idea collides with the test of physical and logical verification.</li>
+          <li><strong>The Test of Maturity:</strong> The resistance of matter is not cosmic malice, but a crucible. In colliding with this resistance, human maturity is tested: one either retreats into comfortable illusion or tempers their will and adjusts their execution until the construction withstands the test of reality.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>IV. Architecture of Being as the Path of Human Struggle</h2>
+        <p>The vector of human destiny within this framework can be captured as a process of continuously overcoming resistance:</p>
+
+        <div class="diagram-card">
+          <div class="diagram-step">
+            <div class="diagram-title">[ PASSIVE MAN ]</div>
+            <div class="diagram-desc">Succumbs to entropy, lives in illusion (Passive Chaos)</div>
+          </div>
+          <div class="diagram-arrow">&nbsp;&nbsp;&nbsp;&nbsp;&#124;<br>&nbsp;&nbsp;&nbsp;&nbsp;&#9660; (Existential Inquiry & Act of Revolt)</div>
+          <div class="diagram-step">
+            <div class="diagram-title">[ ACTIVE MAN ]</div>
+            <div class="diagram-desc">Imposes rigor, builds systems (The Erambios Manifesto)</div>
+          </div>
+          <div class="diagram-arrow">&nbsp;&nbsp;&nbsp;&nbsp;&#124;<br>&nbsp;&nbsp;&nbsp;&nbsp;&#9660; (Collision with Material Resistance)</div>
+          <div class="diagram-step">
+            <div class="diagram-title">[ MAN-ARCHITECT ]</div>
+            <div class="diagram-desc">Breaks inertia, erects Truth within Being</div>
+          </div>
+        </div>
+
+        <p>Man emerges here as the sole unique bridge:</p>
+        <ul>
+          <li>From grounding in matter, they draw hard rigor and remain subject to physical laws.</li>
+          <li>From grounding in intent, they draw the capacity to construct purposes that the physical world itself does not possess.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>V. Synthesis: The Creator and the Builder</h2>
+        <p>The Architecture of Being is not a completed building into which man enters—it is a construction site where man is the sole Architect. Truth is not a static state, but a hard-fought outcome: it is achieved when man, armed with the uncompromising rigor of Erambios, conquers their own passivity and, in the confrontation with the resistance of the Matrix of Existence, transforms shapeless chaos into enduring, structured meaning.</p>
+      </section>
     </article>
+
+    <a href="tezy.html" class="btn-back">&larr; Back to Philosophical Theses</a>
   </main>
 
   <footer>
