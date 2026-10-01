@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Impressum – Erambios</title>
 
-  <!-- Open Graph Image -->
   <meta property="og:image" content="https://erambios.org/og-image.png">
   <meta name="twitter:image" content="https://erambios.org/og-image.png">
 
@@ -24,6 +23,7 @@
       color: var(--text-color);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.8;
+      overflow-x: hidden;
     }
     header {
       border-bottom: 1px solid var(--border-color);
@@ -42,8 +42,8 @@
     }
     .logo-box { display: flex; align-items: center; text-decoration: none; }
     .logo-text { color: #ffffff; font-weight: 800; font-size: 1.3rem; letter-spacing: 2.5px; margin-left: 0.9rem; }
-    .nav-links { display: flex; list-style: none; gap: 1.8rem; }
-    .nav-links a { color: var(--text-color); text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+    .nav-links { display: flex; list-style: none; gap: 1.5rem; }
+    .nav-links a { color: var(--text-color); text-decoration: none; font-size: 0.9rem; transition: color 0.2s ease; }
     .nav-links a:hover { color: var(--accent-color); }
     .container { max-width: 850px; margin: 3.5rem auto; padding: 0 1.5rem; }
     h1 { font-size: 2.2rem; color: #fff; margin-bottom: 1.5rem; font-weight: 900; }
@@ -53,9 +53,16 @@
       padding: 2.5rem;
       border-radius: 4px;
     }
-    .content-box h2 { color: var(--accent-color); font-size: 1.15rem; margin: 1.5rem 0 0.5rem 0; text-transform: uppercase; letter-spacing: 1px; }
-    .content-box p { color: var(--text-color); font-size: 1.02rem; margin-bottom: 1rem; }
+    .content-box h2 { color: var(--accent-color); font-size: 1.1rem; margin: 1.5rem 0 0.5rem 0; text-transform: uppercase; letter-spacing: 1px; }
+    .content-box p { color: var(--text-color); font-size: 1rem; margin-bottom: 1rem; }
     footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; }
+
+    @media (max-width: 768px) {
+      nav { flex-direction: column; gap: 1rem; padding: 1rem; }
+      .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+      .container { margin: 2rem auto; }
+      .content-box { padding: 1.5rem; }
+    }
   </style>
 </head>
 <body>
@@ -74,7 +81,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="filozofia.html">Manifesto</a></li>
         <li><a href="tezy.html">Theses</a></li>
-        <li><a href="ewolucja-ciekawosci.html">Evolution of Curiosity</a></li>
+        <li><a href="ewolucja-ciekawosci.html">Curiosity</a></li>
         <li><a href="kontakt.html">Contact</a></li>
       </ul>
     </nav>
@@ -83,35 +90,33 @@
   <main class="container">
     <h1>Impressum</h1>
     <article class="content-box">
-      <h2>Information according to § 5 TMG</h2>
+      <h2>Angaben gemäß § 5 TMG</h2>
       <p>
         <strong>Tomasz Wiśniewski</strong><br>
         Nikolausstraße 7<br>
         97256 Geroldshausen<br>
-        Germany
+        Deutschland
       </p>
 
-      <h2>Contact</h2>
+      <h2>Kontakt</h2>
       <p>
-        Email: erambios.org@gmail.com
+        E-Mail: erambios.org@gmail.com
       </p>
 
-      <h2>Responsible for Content</h2>
+      <h2>Verantwortlich für den Inhalt</h2>
       <p>
-        Tomasz Wiśniewski (Address as above)
+        Tomasz Wiśniewski (Anschrift wie oben)
       </p>
 
-      <h2>Non-Commercial Purpose / Notice</h2>
+      <h2>Hinweis zum nicht-kommerziellen Charakter</h2>
       <p>
-        This website is a non-commercial, private intellectual and philosophical project. 
-        It does not offer any commercial goods, services, or paid subscriptions, nor does it generate any financial revenue. 
-        All published texts, manifests, and essays serve exclusively scientific, educational, and philosophical purposes.
+        Diese Website ist ein privates, nicht-kommerzielles und philosophisches Projekt. Es werden keine kommerziellen Waren, Dienstleistungen oder kostenpflichtigen Abonnements angeboten und es wird keinerlei finanzielle Einnahme erzielt. Alle veröffentlichten Texte und Essays dienen ausschließlich wissenschaftlichen, bildungsbezogenen und philosophischen Zwecken.
       </p>
     </article>
   </main>
 
   <footer>
-    <p>&copy; 2026 Erambios.org — All rights reserved. | <a href="impressum.html" style="color:var(--text-muted);">Impressum</a> | <a href="datenschutz.html" style="color:var(--text-muted);">Privacy Policy</a></p>
+    <p>&copy; 2026 Erambios.org — All rights reserved. | <a href="impressum.html" style="color:var(--text-muted);">Impressum</a> | <a href="datenschutz.html" style="color:var(--text-muted);">Datenschutz</a></p>
   </footer>
 
 </body>
