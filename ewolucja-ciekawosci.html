@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ewolucja ciekawości – Erambios</title>
+  <title>Evolution of Curiosity – Erambios</title>
 
   <!-- Open Graph Image -->
   <meta property="og:image" content="https://erambios.org/og-image.png">
-
-  <!-- Twitter Card Image -->
   <meta name="twitter:image" content="https://erambios.org/og-image.png">
 
   <style>
@@ -21,25 +19,75 @@
       --border-color: #21262d;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { background-color: #0d0f12 !important; color: var(--text-color); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.8; }
-    header { border-bottom: 1px solid var(--border-color); background-color: rgba(13, 15, 18, 0.95); position: sticky; top: 0; z-index: 1000; }
-    nav { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+    html, body {
+      background-color: #0d0f12 !important;
+      color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border-color);
+      background-color: rgba(13, 15, 18, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
     .logo-box { display: flex; align-items: center; text-decoration: none; }
     .logo-text { color: #ffffff; font-weight: 800; font-size: 1.3rem; letter-spacing: 2.5px; margin-left: 0.9rem; }
-    .nav-links { display: flex; list-style: none; gap: 1.8rem; }
-    .nav-links a { color: var(--text-color); text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+    .nav-links { display: flex; list-style: none; gap: 1.5rem; }
+    .nav-links a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
     .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
-    .container { max-width: 800px; margin: 3.5rem auto; padding: 0 1.5rem; }
-    h1 { color: #fff; font-size: 2.4rem; margin-bottom: 0.5rem; }
-    .meta { color: var(--accent-color); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2.5rem; display: block; font-weight: 700; }
-    .content-box { background-color: var(--card-bg); border: 1px solid var(--border-color); padding: 3rem; border-radius: 4px; }
-    .content-box p { margin-bottom: 1.5rem; color: var(--text-color); font-size: 1.05rem; }
+
+    .container { max-width: 850px; margin: 3.5rem auto; padding: 0 1.5rem; }
+    
+    .manifesto-header { margin-bottom: 3.5rem; text-align: left; }
+    .manifesto-header h1 { font-size: 2.4rem; color: #fff; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 0.5rem; }
+    .manifesto-header .subtitle { font-size: 1.1rem; color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 1rem; }
+    .manifesto-header .author { color: var(--text-muted); font-size: 1rem; border-left: 3px solid var(--accent-color); padding-left: 1rem; margin-top: 1rem; }
+
+    .section-block {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 2.5rem;
+      border-radius: 4px;
+      margin-bottom: 2.5rem;
+    }
+    .section-block h2 { color: #ffffff; font-size: 1.4rem; margin-bottom: 1.2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.6rem; letter-spacing: 0.5px; }
+    .section-block p { color: var(--text-color); font-size: 1.05rem; margin-bottom: 1.2rem; }
+
+    .axiom-box {
+      background-color: #0d0f12;
+      border: 1px solid var(--accent-color);
+      padding: 1.5rem;
+      border-radius: 4px;
+      margin: 1.5rem 0;
+      font-weight: 600;
+      color: #fff;
+    }
+
     footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; }
+
     @media (max-width: 768px) {
       nav { flex-direction: column; gap: 1.2rem; padding: 1rem; }
       .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+      .manifesto-header h1 { font-size: 1.8rem; }
       .container { margin: 2rem auto; }
-      .content-box { padding: 1.5rem; }
+      .section-block { padding: 1.5rem; }
     }
   </style>
 </head>
@@ -47,41 +95,76 @@
 
   <header>
     <nav>
-      <a href="index.html" class="logo-box">
+      <a href="index.html" class="logo-box notranslate" translate="no">
         <svg width="42" height="42" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
           <rect width="200" height="200" fill="#161a20" rx="35"/>
           <rect x="10" y="10" width="180" height="180" fill="none" stroke="#d32f2f" stroke-width="16" rx="30"/>
-          <text x="100" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="120" fill="#ffffff" text-anchor="middle">E</text>
+          <text x="100" y="142" class="notranslate" translate="no" font-family="-apple-system, sans-serif" font-weight="900" font-size="120" fill="#ffffff" text-anchor="middle">E</text>
         </svg>
-        <span class="logo-text">ERAMBIOS</span>
+        <span class="logo-text notranslate" translate="no">ERAMBIOS</span>
       </a>
       <ul class="nav-links">
-        <li><a href="index.html">Dom</a></li>
-        <li><a href="filozofia.html">Manifest</a></li>
-        <li><a href="tezy.html">Tezy</a></li>
-        <li><a href="ewolucja-ciekawosci.html" class="active">Ewolucja ciekawości</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="filozofia.html">Manifesto</a></li>
+        <li><a href="tezy.html">Theses</a></li>
+        <li><a href="ewolucja-ciekawosci.html" class="active">Curiosity</a></li>
+        <li><a href="edukacja.html">Education</a></li>
+        <li><a href="kontakt.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="container">
-    <h1>Ewolucja ciekawości</h1>
-    <span class="meta">Jak trzy pytania zbudowały cywilizację</span>
 
-    <article class="content-box">
-      <p>Ciekawość to nie tylko impuls psychologiczny; to fundamentalny motor ludzkiej cywilizacji. Przejście od pierwotnego przetrwania do ustrukturyzowanych dociekań filozoficznych było napędzane trzema kluczowymi pytaniami egzystencjalnymi.</p>
+    <header class="manifesto-header">
+      <div class="subtitle">Cognitive Archeology & Awakening</div>
+      <h1>THE EVOLUTION OF CURIOSITY</h1>
+      <p style="color: var(--text-muted); font-size: 1.1rem;">From the Cave of Instinct to the Algorithmic Labyrinth</p>
       
-      <p>Pierwsze pytanie — <em>„Jak?”</em> — położyło fundament pod empiryczną obserwację i tworzenie narzędzi. Drugie — <em>„Dlaczego?”</em> — dało początek inżynierii, nauce i systemowemu rozumieniu świata. Wreszcie trzecie pytanie — <em>„Po co?”</em> — otworzyło drzwi do ontologii, etyki i samej świadomości.</p>
+      <div class="author">
+        <strong>Author:</strong> Tomasz Wiśniewski<br>
+        <strong>Project:</strong> Erambios Core Systems
+      </div>
+    </header>
 
-      <p>Poprzez ten łuk ewolucyjny, ludzka myśl przekształciła się z narzędzia adaptacji środowiskowej w suwerenną siłę zdolną do badania samej egzystencji.</p>
+    <!-- INTRO -->
+    <article class="section-block">
+      <h2>1. The Silence Before the Word</h2>
+      <p>For millions of years, our ancestors traversed the Earth as an intrinsic part of it, bound by absolute, crystal-clear silence of thought. They were not observers of reality; they were reality itself. When the sun rose, they did not analyze its warmth—they simply felt it. Their operating system relied on primal algorithms shared with wolves, hawks, and fish.</p>
+      <p>This was the world of the eternal "now." Past existed only as a scar; future did not exist at all. In this raw environment, Homo erectus achieved evolutionary perfection—yet suffered from complete structural stagnation, retaining identical flint tools for over a million years because instinct dictates: <em>If it works, do not fix it.</em></p>
+      
+      <div class="axiom-box">
+        The awakening of civilization did not start with a grand plan, but with an anomaly—a glitch in the system of survival.
+      </div>
     </article>
+
+    <!-- SECTION 2 -->
+    <article class="section-block">
+      <h2>2. The Triad of Questions: How, Why, To What End?</h2>
+      <p>Human cognition evolved through a relentless progression of three foundational questions that broke open the cage of instinct:</p>
+      
+      <h3>The Age of "HOW?" (Engineering)</h3>
+      <p>Triggered by the mastery of fire and agriculture, humanity stopped accepting environmental constraints. Instead of adapting to reality, we forced reality to adapt to us. Fire became our external stomach, unlocking the caloric surplus needed to build the cerebral cortex. The engineer was born—seeking operational efficiency, control, and command over raw matter.</p>
+
+      <h3>The Age of "WHY?" (Reason and Science)</h3>
+      <p>Born from the primal need to banish terror and chaos, humanity sought underlying causes. Through Logos and rational deduction, we transformed a world governed by capricious deities into a predictable, mechanical clockwork universe. We unlocked the rules of the game.</p>
+
+      <h3>The Age of "TO WHAT END?" (The Crisis of Purpose)</h3>
+      <p>When the industrial revolution and modern hyper-technology maximized "How" while data-driven algorithms automated "Why," humanity lost its compass. We became a civilization of supreme means and absolute zero purpose—driving at maximum speed on an infinite highway with no destination in sight.</p>
+    </article>
+
+    <!-- SECTION 3 -->
+    <article class="section-block">
+      <h2>3. The Modern Labyrinth and the Return to the Workshop</h2>
+      <p>Today, living in an era of deep dataism and synthetic intelligence, we face an existential trial. We possess infinite information, yet suffer from a severe famine of meaning. The modern human sits on a three-legged stool where the leg of Power (How) is massive steel, the leg of Knowledge (Why) is solid, but the leg of Purpose (To What End?) has rotted away.</p>
+      <p>Erambios is a call to return to the workbench. It is an intellectual sanctuary designed to recalibrate the triad, forge mental rigor, and strip away the algorithmic noise. Curiosity must evolve once more—not into passive consumption of data, but into active, unyielding architectural resistance against entropy.</p>
+    </article>
+
   </main>
 
-<footer>
-  <p>&copy; 2026 Erambios.org — All rights reserved. | <a href="impressum.html" style="color:var(--text-muted);">Impressum</a> | <a href="datenschutz.html" style="color:var(--text-muted);">Privacy Policy</a></p>
-</footer>
-
+  <footer>
+    <p>&copy; 2026 Erambios.org — All rights reserved. | <a href="impressum.html" style="color:var(--text-muted);">Impressum</a> | <a href="datenschutz.html" style="color:var(--text-muted);">Privacy Policy</a></p>
+  </footer>
 
 </body>
 </html>
