@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education & Manifesto – Erambios</title>
+
+  <!-- Open Graph Image -->
+  <meta property="og:image" content="https://erambios.org/og-image.png">
+  <meta name="twitter:image" content="https://erambios.org/og-image.png">
+
+  <style>
+    :root {
+      --bg-color: #0d0f12;
+      --card-bg: #161a20;
+      --accent-color: #d32f2f;
+      --text-color: #e1e6ed;
+      --text-muted: #8b949e;
+      --border-color: #21262d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background-color: #0d0f12 !important;
+      color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border-color);
+      background-color: rgba(13, 15, 18, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    .logo-box { display: flex; align-items: center; text-decoration: none; }
+    .logo-text { color: #ffffff; font-weight: 800; font-size: 1.3rem; letter-spacing: 2.5px; margin-left: 0.9rem; }
+    .nav-links { display: flex; list-style: none; gap: 1.5rem; }
+    .nav-links a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
+
+    .container { max-width: 850px; margin: 3.5rem auto; padding: 0 1.5rem; }
+    
+    .manifesto-header { margin-bottom: 3.5rem; text-align: left; }
+    .manifesto-header h1 { font-size: 2.4rem; color: #fff; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 0.5rem; }
+    .manifesto-header .subtitle { font-size: 1.1rem; color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 1rem; }
+    .manifesto-header .author { color: var(--text-muted); font-size: 1rem; border-left: 3px solid var(--accent-color); padding-left: 1rem; margin-top: 1rem; }
+
+    .section-block {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 2.5rem;
+      border-radius: 4px;
+      margin-bottom: 2.5rem;
+    }
+    .section-block h2 { color: #ffffff; font-size: 1.4rem; margin-bottom: 1.2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.6rem; letter-spacing: 0.5px; }
+    .section-block h3 { color: var(--accent-color); font-size: 1.15rem; margin: 1.5rem 0 0.8rem 0; }
+    .section-block p { color: var(--text-color); font-size: 1.05rem; margin-bottom: 1.2rem; }
+    .section-block ul { margin: 1rem 0 1.5rem 1.5rem; color: var(--text-color); }
+    .section-block li { margin-bottom: 0.8rem; font-size: 1.02rem; }
+
+    .axiom-box {
+      background-color: #0d0f12;
+      border: 1px solid var(--accent-color);
+      padding: 1.5rem;
+      border-radius: 4px;
+      margin: 1.5rem 0;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; }
+
+    @media (max-width: 768px) {
+      nav { flex-direction: column; gap: 1.2rem; padding: 1rem; }
+      .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+      .manifesto-header h1 { font-size: 1.8rem; }
+      .container { margin: 2rem auto; }
+      .section-block { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo-box notranslate" translate="no">
+        <svg width="42" height="42" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <rect width="200" height="200" fill="#161a20" rx="35"/>
+          <rect x="10" y="10" width="180" height="180" fill="none" stroke="#d32f2f" stroke-width="16" rx="30"/>
+          <text x="100" y="142" class="notranslate" translate="no" font-family="-apple-system, sans-serif" font-weight="900" font-size="120" fill="#ffffff" text-anchor="middle">E</text>
+        </svg>
+        <span class="logo-text notranslate" translate="no">ERAMBIOS</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="filozofia.html">Manifesto</a></li>
+        <li><a href="tezy.html">Theses</a></li>
+        <li><a href="edukacja.html" class="active">Education</a></li>
+        <li><a href="kontakt.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <header class="manifesto-header">
+      <div class="subtitle">Structural Framework & Pedagogy</div>
+      <h1>EDUCATION: SHAPING ARCHITECTS OF REALITY</h1>
+      <p style="color: var(--text-muted); font-size: 1.1rem;">Defending Against Economic Entropy and Superficiality</p>
+      
+      <div class="author">
+        <strong>Author:</strong> Tomasz Wiśniewski<br>
+        <strong>Project:</strong> Architecture of Being & Civilization Development
+      </div>
+    </header>
+
+    <!-- INTRO -->
+    <article class="section-block">
+      <h2>Preamble: The Illusion of Modern Learning</h2>
+      <p>The modern education system is a systemic illusion that generates a structural threat to civilization. This must be stated loudly and clearly: academic theses and curricula become obsolete with every passing generation. Mass education feeds young people outdated theory instead of teaching them the rigor of thought and execution.</p>
+      <p>We all bear the consequences of this thoughtlessness. The quality of education suffers, which directly translates to the labor market. Due to poorly qualified, superficial workers who can only operate schemas rather than understanding the essence of their work, the entire economy takes a devastating hit.</p>
+      
+      <div class="axiom-box">
+        Erambios rejects this fiction. We redefine education as the process of hardening the will and forging absolute professionalism, based on the fundamental role of parents, teachers, and the unyielding ethos of execution.
+      </div>
+    </article>
+
+    <!-- SECTION 1 -->
+    <article class="section-block">
+      <h2>1. The First Line of Defense: Parents and the Right to Error</h2>
+      <p>Erambios education does not begin in institutions, but at home, from the earliest years of life. Parents here are not harsh overseers—they are wise guides who build a child's resistance to chaos while respecting their natural right to childhood.</p>
+      
+      <h3>Space for Play and Discovery</h3>
+      <p>Erambios recognizes childhood as the foundation of human agency. A child has an absolute right to unscripted play, experiments, and making mistakes. It is precisely out of curiosity—and even the scattering of toys or breaking of objects—that the will to know and the later living wonder for the world are born. The home must be a safe experimental proving ground.</p>
+
+      <h3>The Error as a Lesson, Persistence in Error as Stupidity</h3>
+      <p>Erambios does not punish missteps. Failure, a broken toy, or a flawed assumption is a natural element of learning. The parent's role begins the moment an error occurs. Instead of doing the work for the child, immediately buying a replacement, or tolerating sloppiness, the parent sits down with the child and teaches them analysis. Together, they seek the cause: <em>Why did the structure fall apart? What can we do better?</em> From an early age, the child learns a core principle: making a mistake is a natural stage of creation, but persisting in it out of laziness or stubbornness is stupidity.</p>
+
+      <h3>Engineering the Home Environment</h3>
+      <p>Parents protect the child's developing consciousness from digital apathy, algorithm-driven overstimulation, and the culture of instant gratification. Instead of passive staring at a screen, they stimulate the child to active action, craftsmanship, and creative play in the real world. Thanks to this, the young human learns that they have a real impact on the surrounding matter.</p>
+    </article>
+
+    <!-- SECTION 2 -->
+    <article class="section-block">
+      <h2>2. The Teacher as Master of Construction</h2>
+      <p>The teacher's role must be instantly elevated to the rank of a mentor of rigor. In a world where knowledge is universally accessible and AI can process information in seconds, a teacher who merely dispenses dry facts becomes obsolete.</p>
+      
+      <h3>End of Tolerance for Mediocrity</h3>
+      <p>In the Erambios system, the teacher is not a bureaucrat grading tests. They are the merciless verifier of the student’s intellectual and psychological coherence.</p>
+
+      <h3>Training Under Load</h3>
+      <p>The teacher's task is to provoke the student to push past their own limits, ruthlessly exposing intellectual laziness and pointing out fractures in their logical thinking. The teacher trains the young person to bear pressure and effort so that in the future, their mental and professional structure will never crack under the weight of life's loads.</p>
+    </article>
+
+    <!-- SECTION 3 -->
+    <article class="section-block">
+      <h2>3. Philosophy of the Tool: Know How to Execute</h2>
+      <p>Traditional trade schools and training programs commit a cardinal error: they teach the mechanical handling of tools. Erambios redefines this process.</p>
+      
+      <h3>Mastering Matter</h3>
+      <p>The student must not merely know what a hammer is for, how to write a prompt in AI, or how to operate an advanced machine. The student must grasp the dynamics, physics, and logic of the process. The tool is merely an extension of the will. The goal of learning is not the movement of the tool, but the uncompromising quality and perfection of the finished work.</p>
+
+      <h3>Responsibility for the Result</h3>
+      <p>Every task—from a physical carpentry construction to programming code—must be executed as if it were to undergo testing in deep vacuum. If the work has a structural defect, the worker has failed morally. Only such an approach builds workforces that develop the economy rather than destabilizing them with their errors.</p>
+    </article>
+
+    <!-- SECTION 4 -->
+    <article class="section-block">
+      <h2>4. The Triad of Competencies Against Entropy</h2>
+      <p>The Erambios educational curriculum replaces obsolete academic syllabi with dynamic development on three levels:</p>
+      
+      <ul>
+        <li><strong>Algorithmic Verification (AI as a Partner):</strong> The student uses artificial intelligence as a merciless simulator of material stress. AI serves to catch logical errors and test the student's hypotheses, rather than to thoughtlessly complete assignments.</li>
+        <li><strong>Culture of Craftsmanship:</strong> Mandatory manual labor for everyone. Translating thought into resistant matter teaches humility before the laws of the universe, which cannot be cheated with academic jargon.</li>
+        <li><strong>Biological Anchor:</strong> Nurturing living wonder, the will to fight mediocrity, and authentic human relationships. This is the biological core that makes a human being surpass any algorithm and become a true Architect of Reality.</li>
+      </ul>
+    </article>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Erambios.org — All rights reserved. | <a href="impressum.html" style="color:var(--text-muted);">Impressum</a> | <a href="datenschutz.html" style="color:var(--text-muted);">Privacy Policy</a></p>
+  </footer>
+
+</body>
+</html>
