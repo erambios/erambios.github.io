@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact – Erambios</title>
+  <title>Contact & Network – Erambios</title>
+
+  <!-- Open Graph Image -->
+  <meta property="og:image" content="https://erambios.org/og-image.png">
+  <meta name="twitter:image" content="https://erambios.org/og-image.png">
+
   <style>
     :root {
       --bg-color: #0d0f12;
@@ -14,27 +19,70 @@
       --border-color: #21262d;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background-color: var(--bg-color); color: var(--text-color); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.8; }
-    header { border-bottom: 1px solid var(--border-color); background-color: rgba(13, 15, 18, 0.95); position: sticky; top: 0; z-index: 1000; }
-    nav { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+    html, body {
+      background-color: #0d0f12 !important;
+      color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border-color);
+      background-color: rgba(13, 15, 18, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
     .logo-box { display: flex; align-items: center; text-decoration: none; }
     .logo-text { color: #ffffff; font-weight: 800; font-size: 1.3rem; letter-spacing: 2.5px; margin-left: 0.9rem; }
-    .nav-links { display: flex; list-style: none; gap: 1.8rem; }
-    .nav-links a { color: var(--text-color); text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+    .nav-links { display: flex; list-style: none; gap: 1.5rem; }
+    .nav-links a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
     .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
-    .container { max-width: 800px; margin: 3.5rem auto; padding: 0 1.5rem; }
-    h1 { color: #fff; font-size: 2.4rem; margin-bottom: 0.5rem; }
-    .subtitle { color: var(--text-muted); margin-bottom: 2.5rem; font-size: 1.1rem; }
-    .contact-card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-left: 4px solid var(--accent-color); padding: 2.5rem; border-radius: 4px; }
-    .contact-card h2 { color: #fff; font-size: 1.3rem; margin-bottom: 1rem; }
-    .email-link { color: var(--accent-color); font-size: 1.2rem; font-weight: 700; text-decoration: none; }
-    .email-link:hover { text-decoration: underline; }
+
+    .container { max-width: 850px; margin: 3.5rem auto; padding: 0 1.5rem; }
+    
+    .manifesto-header { margin-bottom: 3.5rem; text-align: left; }
+    .manifesto-header h1 { font-size: 2.4rem; color: #fff; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 0.5rem; }
+    .manifesto-header .subtitle { font-size: 1.1rem; color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 1rem; }
+
+    .section-block {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 2.5rem;
+      border-radius: 4px;
+      margin-bottom: 2.5rem;
+    }
+    .section-block h2 { color: #ffffff; font-size: 1.4rem; margin-bottom: 1.2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.6rem; letter-spacing: 0.5px; }
+    .section-block p { color: var(--text-color); font-size: 1.05rem; margin-bottom: 1.2rem; }
+    
+    .channel-list { list-style: none; margin-top: 1.5rem; }
+    .channel-list li { margin-bottom: 1rem; font-size: 1.05rem; }
+    .channel-list a { color: var(--accent-color); text-decoration: none; font-weight: 600; transition: opacity 0.2s; }
+    .channel-list a:hover { opacity: 0.8; text-decoration: underline; }
+    .channel-desc { color: var(--text-muted); font-size: 0.95rem; margin-top: 0.2rem; }
+
     footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; }
+
     @media (max-width: 768px) {
       nav { flex-direction: column; gap: 1.2rem; padding: 1rem; }
       .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+      .manifesto-header h1 { font-size: 1.8rem; }
       .container { margin: 2rem auto; }
-      .contact-card { padding: 1.5rem; }
+      .section-block { padding: 1.5rem; }
     }
   </style>
 </head>
@@ -42,41 +90,73 @@
 
   <header>
     <nav>
-      <a href="index.html" class="logo-box">
+      <a href="index.html" class="logo-box notranslate" translate="no">
         <svg width="42" height="42" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
           <rect width="200" height="200" fill="#161a20" rx="35"/>
           <rect x="10" y="10" width="180" height="180" fill="none" stroke="#d32f2f" stroke-width="16" rx="30"/>
-          <text x="100" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="120" fill="#ffffff" text-anchor="middle">E</text>
+          <text x="100" y="142" class="notranslate" translate="no" font-family="-apple-system, sans-serif" font-weight="900" font-size="120" fill="#ffffff" text-anchor="middle">E</text>
         </svg>
-        <span class="logo-text">ERAMBIOS</span>
+        <span class="logo-text notranslate" translate="no">ERAMBIOS</span>
       </a>
       <ul class="nav-links">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="filozofia.html">Manifesto</a></li>
-  <li><a href="tezy.html">Theses</a></li>
-  <li><a href="ewolucja-ciekawosci.html">Evolution of Curiosity</a></li>
-  <li><a href="edukacja.html">Education</a></li>
-  <li><a href="kontakt.html">Contact</a></li>
-</ul>
-
+        <li><a href="index.html">Home</a></li>
+        <li><a href="filozofia.html">Manifesto</a></li>
+        <li><a href="tezy.html">Theses</a></li>
+        <li><a href="ewolucja-ciekawosci.html">Curiosity</a></li>
+        <li><a href="edukacja.html">Education</a></li>
+        <li><a href="kontakt.html" class="active">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
   <main class="container">
-    <h1>Contact</h1>
-    <p class="subtitle">Direct communication channel for inquiries regarding philosophy and authorial works.</p>
 
-    <div class="contact-card">
-      <h2>Official Communication Channel</h2>
-      <p>For correspondence, essay discussions, or inquiries, reach out at:</p>
-      <p style="margin-top: 1rem;"><a href="mailto:contact@erambios.org" class="email-link">contact@erambios.org</a></p>
-    </div>
+    <header class="manifesto-header">
+      <div class="subtitle">Direct Communication</div>
+      <h1>CONTACT & NETWORK</h1>
+      <p style="color: var(--text-muted); font-size: 1.1rem;">Channels of direct transmission and intellectual resistance</p>
+    </header>
+
+    <!-- DIRECT CONTACT -->
+    <article class="section-block">
+      <h2>Direct Inquiries</h2>
+      <p>For correspondence, structural partnerships, or inquiries regarding the project, reach out directly via electronic mail:</p>
+      <p style="font-size: 1.2rem; font-weight: 700; color: #fff; margin-top: 1rem;">
+        <a href="mailto:erambios.org@gmail.com" style="color: var(--accent-color); text-decoration: none;">erambios.org@gmail.com</a>
+      </p>
+    </article>
+
+    <!-- EXTERNAL CHANNELS -->
+    <article class="section-block">
+      <h2>External Channels & Network</h2>
+      <p>Follow official project updates, essays, and core reflections across the network:</p>
+      
+      <ul class="channel-list">
+        <li>
+          <a href="https://x.com/ERAMBIOS" target="_blank">X (Twitter) / @ERAMBIOS</a>
+          <div class="channel-desc">Core statements, live thoughts, and structural commentary against entropy.</div>
+        </li>
+        <li style="margin-top: 1.5rem;">
+          <a href="https://www.linkedin.com/in/tomasz-wisniewski-4987b243a" target="_blank">LinkedIn / Tomasz Wiśniewski</a>
+          <div class="channel-desc">Professional background, engineering rigor, and structural management perspective.</div>
+        </li>
+        <li style="margin-top: 1.5rem;">
+          <a href="https://substack.com/@tomaszwiniewski" target="_blank">Substack / Tomasz Wiśniewski</a>
+          <div class="channel-desc">Long-form essays, deep philosophical inquiries, and manuscript excerpts.</div>
+        </li>
+      </ul>
+    </article>
+
   </main>
-<footer>
-  <p>&copy; 2026 Erambios.org — All rights reserved. | <a href="impressum.html" style="color:var(--text-muted);">Impressum</a> | <a href="datenschutz.html" style="color:var(--text-muted);">Privacy Policy</a></p>
-</footer>
 
-
+  <footer>
+    <p style="margin-bottom: 0.8rem;">
+      <a href="https://x.com/ERAMBIOS" target="_blank" style="color: var(--text-muted); text-decoration: none; margin: 0 0.8rem;">X (Twitter)</a> | 
+      <a href="https://www.linkedin.com/in/tomasz-wisniewski-4987b243a" target="_blank" style="color: var(--text-muted); text-decoration: none; margin: 0 0.8rem;">LinkedIn</a> | 
+      <a href="https://substack.com/@tomaszwiniewski" target="_blank" style="color: var(--text-muted); text-decoration: none; margin: 0 0.8rem;">Substack</a>
+    </p>
+    <p>&copy; 2026 Erambios.org — All rights reserved. | <a href="impressum.html" style="color:var(--text-muted);">Impressum</a> | <a href="datenschutz.html" style="color:var(--text-muted);">Privacy Policy</a></p>
+  </footer>
 
 </body>
 </html>
