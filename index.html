@@ -3,50 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Erambios – Basic Input/Output System of Being</title>
-  <!-- Podstawowe Meta Tagie SEO -->
-<!-- Primary Meta Tags -->
-<meta name="description" content="Erambios – An intellectual sanctuary dedicated to ontological research, structural philosophy, and active resistance against existential chaos.">
-<meta name="keywords" content="Erambios, philosophy, ontology, stoicism, Passive Chaos Theory, Ontological Malicism Manifest, Identity Axiom">
-<meta name="author" content="Tomasz, Wiśniewski">
+  <title>Erambios – Architecture of Being</title>
 
-<!-- Open Graph / Facebook / WhatsApp / Messenger -->
-<!-- Open Graph Image -->
-<meta property="og:image" content="https://erambios.org/og-image.png">
-
-<!-- Twitter Card Image -->
-<meta name="twitter:image" content="https://erambios.org/og-image.png">
-
-  <meta property="og:type" content="website">
-<meta property="og:url" content="https://erambios.org/">
-<meta property="og:title" content="Erambios – Intellectual Sanctuary">
-<meta property="og:description" content="An intellectual sanctuary dedicated to ontological research, structural philosophy, and active resistance against existential chaos.">
-<meta property="og:image" content="https://erambios.org/assets/og-image.png">
-
-<!-- Twitter Cards -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://erambios.org/">
-<meta name="twitter:title" content="Erambios – Intellectual Sanctuary">
-<meta name="twitter:description" content="An intellectual sanctuary dedicated to ontological research, structural philosophy, and active resistance against existential chaos.">
-<meta name="twitter:image" content="https://erambios.org/assets/og-image.png">
-
-
-  <!-- FAVICON -->
-  <link rel="icon" type="image/png" href="favicon.png">
-<!-- JSON-LD Structured Data for AI & Search Engines -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Erambios",
-  "url": "https://erambios.org/",
-  "description": "An intellectual sanctuary dedicated to ontological research, structural philosophy, and active resistance against existential chaos.",
-  "author": {
-    "@type": "Person",
-    "name": "Tomasz Wisniewski"
-  }
-}
-</script>
+  <!-- Open Graph Image -->
+  <meta property="og:image" content="https://erambios.org/og-image.png">
+  <meta name="twitter:image" content="https://erambios.org/og-image.png">
 
   <style>
     :root {
@@ -58,70 +19,13 @@
       --border-color: #21262d;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background-color: var(--bg-color);
+    html, body {
+      background-color: #0d0f12 !important;
       color: var(--text-color);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.7;
+      line-height: 1.8;
       overflow-x: hidden;
     }
-
-    #intro-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: #0d0f12;
-      z-index: 99999;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      animation: fadeOutOverlay 0.6s ease 2.2s forwards;
-    }
-
-    .intro-content {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      opacity: 0;
-      transform: scale(0.85);
-      animation: zoomInLogo 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
-    }
-
-    .intro-box {
-      width: 55px;
-      height: 55px;
-      background-color: #161a20;
-      border: 3px solid #d32f2f;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 0 25px rgba(211, 47, 47, 0.5);
-    }
-
-    .intro-letter {
-      color: #ffffff;
-      font-size: 1.8rem;
-      font-weight: 900;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    }
-
-    .intro-text {
-      color: #ffffff;
-      font-size: 1.6rem;
-      font-weight: 800;
-      letter-spacing: 3px;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      opacity: 0;
-      transform: translateX(-10px);
-      animation: fadeInText 0.6s ease 0.8s forwards;
-    }
-
-    @keyframes zoomInLogo { to { opacity: 1; transform: scale(1); } }
-    @keyframes fadeInText { to { opacity: 1; transform: translateX(0); } }
-    @keyframes fadeOutOverlay { to { opacity: 0; visibility: hidden; } }
 
     header {
       border-bottom: 1px solid var(--border-color);
@@ -140,121 +44,62 @@
     }
     .logo-box { display: flex; align-items: center; text-decoration: none; }
     .logo-text { color: #ffffff; font-weight: 800; font-size: 1.3rem; letter-spacing: 2.5px; margin-left: 0.9rem; }
-    .nav-links { display: flex; list-style: none; gap: 1.8rem; }
-    .nav-links a { color: var(--text-color); text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+    .nav-links { display: flex; list-style: none; gap: 1.5rem; }
+    .nav-links a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
     .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
+
     .container { max-width: 850px; margin: 3.5rem auto; padding: 0 1.5rem; }
     
-    .hero { margin-bottom: 3.5rem; }
-    .hero h1 { font-size: 2.8rem; color: #fff; margin-bottom: 1rem; font-weight: 800; letter-spacing: -0.5px; }
-    .hero p.hero-main { font-size: 1.25rem; color: var(--text-muted); max-width: 720px; }
-    
-    /* ETYMOLOGY BOX STYLES */
-    .etymology-box {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-left: 3px solid var(--accent-color);
-      padding: 1.8rem;
-      border-radius: 4px;
-      margin-top: 2rem;
-    }
-    .etymology-box h3 {
-      color: #ffffff;
-      font-size: 1.2rem;
-      margin-bottom: 0.8rem;
-      letter-spacing: 0.5px;
-    }
-    .etymology-box p {
-      font-size: 1rem;
-      color: var(--text-color);
-      margin-bottom: 0.8rem;
-    }
-    .etymology-box ul {
-      margin: 0.8rem 0 1.2rem 1.5rem;
-      color: var(--text-color);
-    }
-    .etymology-box li {
-      margin-bottom: 0.4rem;
-      font-size: 0.98rem;
-    }
-    .etymology-summary {
-      border-top: 1px solid var(--border-color);
-      padding-top: 0.8rem;
-      margin-bottom: 0 !important;
-      font-size: 0.95rem !important;
-      color: var(--text-muted) !important;
-    }
+    .manifesto-header { margin-bottom: 3rem; text-align: left; }
+    .manifesto-header h1 { font-size: 2.4rem; color: #fff; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 0.5rem; }
+    .manifesto-header .subtitle { font-size: 1.1rem; color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 1rem; }
 
-    .quote-card {
+    .section-block {
       background-color: var(--card-bg);
       border: 1px solid var(--border-color);
       border-left: 4px solid var(--accent-color);
-      padding: 2rem;
-      border-radius: 4px;
-      margin-bottom: 3.5rem;
-    }
-    .quote-card p { font-size: 1.15rem; font-style: italic; color: #fff; margin-bottom: 0.8rem; }
-    .quote-card span { font-size: 0.85rem; color: var(--accent-color); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; }
-    
-    .manifesto-preview {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border-color);
       padding: 2.5rem;
       border-radius: 4px;
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
     }
-    .manifesto-preview h2 { color: #fff; font-size: 1.8rem; margin-bottom: 0.5rem; }
-    .manifesto-preview .sub { color: var(--accent-color); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem; display: block; }
-    .manifesto-preview p { margin-bottom: 1.5rem; color: var(--text-color); }
+    .section-block h3 { color: #ffffff; font-size: 1.3rem; margin-bottom: 0.8rem; }
+    .section-block p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem; }
 
-    .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
-    .btn-primary {
-      background-color: var(--accent-color);
-      color: #fff;
-      padding: 0.8rem 1.6rem;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.95rem;
-      transition: background-color 0.2s ease;
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
     }
-    .btn-primary:hover { background-color: #b71c1c; }
-    .btn-secondary {
-      background-color: transparent;
-      color: var(--text-color);
+    .card-link {
+      background-color: var(--card-bg);
       border: 1px solid var(--border-color);
-      padding: 0.8rem 1.6rem;
+      padding: 1.5rem;
       border-radius: 4px;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: border-color 0.2s ease, color 0.2s ease;
+      transition: border-color 0.2s ease;
     }
-    .btn-secondary:hover { border-color: var(--accent-color); color: #fff; }
+    .card-link:hover { border-color: var(--accent-color); }
+    .card-link h4 { color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .card-link p { color: var(--text-muted); font-size: 0.9rem; }
 
     footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; }
 
     @media (max-width: 768px) {
       nav { flex-direction: column; gap: 1.2rem; padding: 1rem; }
       .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
-      .hero h1 { font-size: 2rem; }
-      .hero p.hero-main { font-size: 1.05rem; }
+      .manifesto-header h1 { font-size: 1.8rem; }
       .container { margin: 2rem auto; }
-      .btn-group { flex-direction: column; }
+      .section-block { padding: 1.5rem; }
     }
   </style>
 </head>
 <body>
-
-  <!-- ANIMACJA OTWARCIA -->
-  <div id="intro-overlay" class="notranslate" translate="no">
-    <div class="intro-content">
-      <div class="intro-box">
-        <span class="intro-letter notranslate" translate="no">E</span>
-      </div>
-      <span class="intro-text notranslate" translate="no">ERAMBIOS</span>
-    </div>
-  </div>
 
   <header>
     <nav>
@@ -262,7 +107,7 @@
         <svg width="42" height="42" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
           <rect width="200" height="200" fill="#161a20" rx="35"/>
           <rect x="10" y="10" width="180" height="180" fill="none" stroke="#d32f2f" stroke-width="16" rx="30"/>
-          <text x="100" y="142" class="notranslate" translate="no" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="120" fill="#ffffff" text-anchor="middle">E</text>
+          <text x="100" y="142" class="notranslate" translate="no" font-family="-apple-system, sans-serif" font-weight="900" font-size="120" fill="#ffffff" text-anchor="middle">E</text>
         </svg>
         <span class="logo-text notranslate" translate="no">ERAMBIOS</span>
       </a>
@@ -270,45 +115,47 @@
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="filozofia.html">Manifesto</a></li>
         <li><a href="tezy.html">Theses</a></li>
-        <li><a href="ewolucja-ciekawosci.html">Evolution of Curiosity</a></li>
+        <li><a href="ewolucja-ciekawosci.html">Curiosity</a></li>
         <li><a href="edukacja.html">Education</a></li>
+        <li><a href="erambios-eye.html">Erambios Eye</a></li>
         <li><a href="kontakt.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="container">
-    <section class="hero">
-      <h1>Welcome to Erambios</h1>
-      <p class="hero-main">An intellectual sanctuary dedicated to rigorous ontological inquiry, structural philosophy, and the confrontation with reality.</p>
 
-      <!-- ETYMOLOGIA NAZWY -->
-      <div class="etymology-box">
-        <h3>Etymology & Origin of the Name</h3>
-        <p>The term <strong>Erambios</strong> emerges from the synthesis of two fundamental linguistic roots forming the pillars of Western thought:</p>
-        <ul>
-          <li><strong>ERAM</strong> (Latin: <i>I was / I existed / I persisted in Being</i>) — anchoring the continuity of existence, time, and self-awareness.</li>
-          <li><strong>BIOS</strong> (Greek: <i>βίος</i> — <i>life / organic system / operative structure</i>) — the functional layer that imparts purpose, rigor, and direction to matter.</li>
-        </ul>
-        <p class="etymology-summary"><strong>Erambios</strong> defines the low-level boot system of consciousness and civilization—a universal architecture of thought where mind and intent exert active resistance against chaos.</p>
-      </div>
+    <!-- GŁÓWNY NAGŁÓWEK -->
+    <header class="manifesto-header">
+      <div class="subtitle">Architecture of Being</div>
+      <h1>ERAMBIOS</h1>
+      <p style="color: var(--text-muted); font-size: 1.1rem;">An intellectual sanctuary dedicated to reliable ontological research, structural philosophy and confrontation with reality.</p>
+    </header>
+
+    <!-- WIDGET: ERAMBIOS EYE (NAJNOWSZY WPIS) -->
+    <section class="section-block">
+      <div style="font-size: 0.85rem; color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Erambios Eye • Latest Entry</div>
+      <h3>The Digital Electorate of Empty Digits</h3>
+      <p>In its mass form, LinkedIn long ago ceased to be a platform for engineering exchange... Accumulating digits without substance is the purest form of intellectual entropy.</p>
+      <a href="erambios-eye.html" style="color: var(--accent-color); font-weight: 600; text-decoration: none; font-size: 0.95rem;">Enter the Event Registry &rarr;</a>
     </section>
 
-    <div class="quote-card">
-      <p>"One can be a fool while being intelligent, but one cannot be intelligent while being a fool."</p>
-      <span>Axiom of Identity</span>
+    <!-- SZYBKIE SKRÓTY DO SEKCJI PROJEKTU -->
+    <div class="links-grid">
+      <a href="filozofia.html" class="card-link">
+        <h4>Manifesto &rarr;</h4>
+        <p>Hardening of the will, structural rigor, and resistance against entropy.</p>
+      </a>
+      <a href="tezy.html" class="card-link">
+        <h4>Theses &rarr;</h4>
+        <p>Core intellectual foundations and rigorous ontological framework.</p>
+      </a>
+      <a href="edukacja.html" class="card-link">
+        <h4>Education &rarr;</h4>
+        <p>Rejecting compliance, demanding mastery of matter over academic jargon.</p>
+      </a>
     </div>
 
-    <section class="manifesto-preview">
-      <h2>The Erambios Manifesto</h2>
-      <span class="sub">Basic Input/Output System of Being & Technology</span>
-      <p>Erambios is the low-level boot system of consciousness and civilization—a universal architecture of thought, intention, and self-awareness that exerts active resistance against chaos through technology.</p>
-
-      <div class="btn-group">
-        <a href="filozofia.html" class="btn-primary">Read Full Canonical Text &rarr;</a>
-        <a href="erambios-manifesto.pdf" download class="btn-secondary">Download PDF</a>
-      </div>
-    </section>
   </main>
 
   <footer>
@@ -319,17 +166,6 @@
     </p>
     <p>&copy; 2026 Erambios.org — All rights reserved. | <a href="impressum.html" style="color:var(--text-muted);">Impressum</a> | <a href="datenschutz.html" style="color:var(--text-muted);">Privacy Policy</a></p>
   </footer>
-
-
-
-  <script>
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        const overlay = document.getElementById('intro-overlay');
-        if (overlay) overlay.style.display = 'none';
-      }, 2800);
-    });
-  </script>
 
 </body>
 </html>
