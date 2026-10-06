@@ -10,42 +10,74 @@
       --text-color: #e1e6ed; --text-muted: #8b949e; --border-color: #21262d;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background-color: var(--bg-color); color: var(--text-color); font-family: -apple-system, sans-serif; line-height: 1.8; }
-    header { border-bottom: 1px solid var(--border-color); background: rgba(13,15,18,0.95); position: sticky; top: 0; z-index: 1000; }
-    nav { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
-    .logo-text { color: #fff; font-weight: 800; font-size: 1.3rem; letter-spacing: 2.5px; }
+    html, body {
+      background-color: var(--bg-color); color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.8; overflow-x: hidden;
+    }
+    header {
+      border-bottom: 1px solid var(--border-color);
+      background-color: rgba(13, 15, 18, 0.95);
+      position: sticky; top: 0; z-index: 1000;
+    }
+    nav {
+      max-width: 1000px; margin: 0 auto; display: flex;
+      justify-content: space-between; align-items: center; padding: 1rem 2rem;
+    }
+    .logo-box { display: flex; align-items: center; text-decoration: none; }
+    .logo-text { color: #ffffff; font-weight: 800; font-size: 1.3rem; letter-spacing: 2.5px; margin-left: 0.9rem; }
     .nav-links { display: flex; list-style: none; gap: 1.5rem; }
-    .nav-links a { color: var(--text-color); text-decoration: none; font-size: 0.95rem; }
+    .nav-links a {
+      color: var(--text-color); text-decoration: none; font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
     .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
     .container { max-width: 850px; margin: 3.5rem auto; padding: 0 1.5rem; }
     h1 { font-size: 2.2rem; color: #fff; margin-bottom: 0.5rem; }
     .subtitle { font-size: 1.1rem; color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 2rem; }
-    .section-block { background-color: var(--card-bg); border: 1px solid var(--border-color); border-left: 4px solid var(--accent-color); padding: 2.5rem; border-radius: 4px; margin-bottom: 2.5rem; }
+    .section-block {
+      background-color: var(--card-bg); border: 1px solid var(--border-color);
+      border-left: 4px solid var(--accent-color); padding: 2.5rem; border-radius: 4px; margin-bottom: 2.5rem;
+    }
     h3 { color: #fff; font-size: 1.3rem; margin-bottom: 0.8rem; }
     p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem; }
     footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; }
+    @media (max-width: 768px) {
+      nav { flex-direction: column; gap: 1.2rem; padding: 1rem; }
+      .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    }
   </style>
 </head>
 <body>
   <header>
     <nav>
-      <a href="index.html" style="text-decoration:none;"><span class="logo-text">ERAMBIOS</span></a>
+      <a href="index.html" class="logo-box notranslate" translate="no">
+        <svg width="42" height="42" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <rect width="200" height="200" fill="#161a20" rx="35"/>
+          <rect x="10" y="10" width="180" height="180" fill="none" stroke="#d32f2f" stroke-width="16" rx="30"/>
+          <text x="100" y="142" class="notranslate" translate="no" font-family="-apple-system, sans-serif" font-weight="900" font-size="120" fill="#ffffff" text-anchor="middle">E</text>
+        </svg>
+        <span class="logo-text notranslate" translate="no">ERAMBIOS</span>
+      </a>
       <ul class="nav-links">
         <li><a href="index.html">Start</a></li>
+        <li><a href="filozofia.html">Philosophie</a></li>
+        <li><a href="tezy.html">Thesen</a></li>
         <li><a href="edukacja.html" class="active">Bildung</a></li>
-        <li><a href="media.html">Medien</a></li>
+        <li><a href="erambios-eye.html">Erambios Auge</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="../edukacja.html" style="color: var(--accent-color); font-weight: bold;">[ EN ]</a></li>
       </ul>
     </nav>
   </header>
   <main class="container">
     <h1>Intellektuelle Bildung</h1>
     <div class="subtitle">Widerstand gegen oberflächliche Information</div>
-
     <section class="section-block">
       <h3>Die Disziplin des Denkens</h3>
       <p>Wahre Bildung ist kein Anhäufen von Fakten, sondern die Fähigkeit zur kompromisslosen Analyse von Strukturen und zur Abweisung von algorithmischem Lärm.</p>
     </section>
   </main>
-  <footer><p>&copy; 2026 Erambios.org — Alle Rechte vorbehalten.</p></footer>
+  <footer><p>&copy; 2026 Erambios.org — Alle Rechte vorbehalten. | <a href="impressum.html" style="color:var(--text-muted);">Impressum</a> | <a href="datenschutz.html" style="color:var(--text-muted);">Datenschutz</a></p></footer>
 </body>
 </html>
