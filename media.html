@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erambios – Media & Assets</title>
+  <style>
+    :root {
+      --bg-color: #0d0f12;
+      --card-bg: #161a20;
+      --accent-color: #d32f2f;
+      --text-color: #e1e6ed;
+      --text-muted: #8b949e;
+      --border-color: #21262d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background-color: #0d0f12 !important;
+      color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.8;
+    }
+    header {
+      border-bottom: 1px solid var(--border-color);
+      background-color: rgba(13, 15, 18, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    .logo-box { display: flex; align-items: center; text-decoration: none; }
+    .logo-text { color: #ffffff; font-weight: 800; font-size: 1.3rem; letter-spacing: 2.5px; margin-left: 0.9rem; }
+    .nav-links { display: flex; list-style: none; gap: 1.5rem; }
+    .nav-links a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
+
+    .container { max-width: 850px; margin: 3.5rem auto; padding: 0 1.5rem; }
+    .page-header { margin-bottom: 3rem; }
+    .page-header h1 { font-size: 2.4rem; color: #fff; font-weight: 900; margin-bottom: 0.5rem; }
+    .page-header .subtitle { font-size: 1.1rem; color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; }
+
+    .section-block {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-left: 4px solid var(--accent-color);
+      padding: 2.5rem;
+      border-radius: 4px;
+      margin-bottom: 2.5rem;
+    }
+    .section-block h3 { color: #ffffff; font-size: 1.3rem; margin-bottom: 0.8rem; }
+    .section-block p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    
+    .btn {
+      display: inline-block;
+      background-color: var(--accent-color);
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: opacity 0.2s ease;
+    }
+    .btn:hover { opacity: 0.9; }
+
+    footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo-box notranslate" translate="no">
+        <svg width="42" height="42" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <rect width="200" height="200" fill="#161a20" rx="35"/>
+          <rect x="10" y="10" width="180" height="180" fill="none" stroke="#d32f2f" stroke-width="16" rx="30"/>
+          <text x="100" y="142" class="notranslate" translate="no" font-family="-apple-system, sans-serif" font-weight="900" font-size="120" fill="#ffffff" text-anchor="middle">E</text>
+        </svg>
+        <span class="logo-text notranslate" translate="no">ERAMBIOS</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="erambios-eye.html">Erambios Eye</a></li>
+        <li><a href="media.html" class="active">Media</a></li>
+        <li><a href="ksiazka.html">Book</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <header class="page-header">
+      <div class="subtitle">Structural Transmissions</div>
+      <h1>Media & Assets</h1>
+      <p style="color: var(--text-muted); font-size: 1.1rem; margin-top: 0.5rem;">Official visual materials, wallpapers, video manifests, and audio transmissions of Erambios.</p>
+    </header>
+
+    <section class="section-block">
+      <h3>Video Transmissions</h3>
+      <p>The cinematic manifesto of Erambios and short system specifications. Direct broadcast from the core.</p>
+      <a href="https://youtube.com/@erambios" target="_blank" class="btn">Watch on YouTube &rarr;</a>
+    </section>
+
+    <section class="section-block">
+      <h3>Wallpapers & System Graphics</h3>
+      <p>High-resolution minimalist wallpapers for monitors and mobile devices featuring the concrete monolith and structural red fracture.</p>
+      <p style="font-size: 0.85rem; color: var(--text-muted); font-style: italic;">[Assets package coming soon upon release update]</p>
+    </section>
+
+    <section class="section-block">
+      <h3>Audio / The Master's Crown</h3>
+      <p>Industrial compositions and audio layers accompanying the philosophical framework.</p>
+      <span style="font-size: 0.85rem; color: var(--accent-color); font-weight: 700;">Active Transmission</span>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Erambios.org — All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
