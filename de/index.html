@@ -1,1 +1,129 @@
-kuku
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erambios – Architektur des Seins</title>
+
+  <style>
+    :root {
+      --bg-color: #0d0f12;
+      --card-bg: #161a20;
+      --accent-color: #d32f2f;
+      --text-color: #e1e6ed;
+      --text-muted: #8b949e;
+      --border-color: #21262d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background-color: #0d0f12 !important;
+      color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+    header {
+      border-bottom: 1px solid var(--border-color);
+      background-color: rgba(13, 15, 18, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    .logo-box { display: flex; align-items: center; text-decoration: none; }
+    .logo-text { color: #ffffff; font-weight: 800; font-size: 1.3rem; letter-spacing: 2.5px; margin-left: 0.9rem; }
+    .nav-links { display: flex; list-style: none; gap: 1.5rem; }
+    .nav-links a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
+
+    .container { max-width: 850px; margin: 3.5rem auto; padding: 0 1.5rem; }
+    
+    .manifesto-header { margin-bottom: 3rem; text-align: left; }
+    .manifesto-header h1 { font-size: 2.4rem; color: #fff; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 0.5rem; }
+    .manifesto-header .subtitle { font-size: 1.1rem; color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 1rem; }
+
+    .section-block {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-left: 4px solid var(--accent-color);
+      padding: 2.5rem;
+      border-radius: 4px;
+      margin-bottom: 2.5rem;
+    }
+    .section-block h3 { color: #ffffff; font-size: 1.3rem; margin-bottom: 0.8rem; }
+    .section-block p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem; }
+
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .card-link {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: border-color 0.2s ease;
+    }
+    .card-link:hover { border-color: var(--accent-color); }
+    .card-link h4 { color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .card-link p { color: var(--text-muted); font-size: 0.9rem; }
+
+    footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo-box notranslate" translate="no">
+        <svg width="42" height="42" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <rect width="200" height="200" fill="#161a20" rx="35"/>
+          <rect x="10" y="10" width="180" height="180" fill="none" stroke="#d32f2f" stroke-width="16" rx="30"/>
+          <text x="100" y="142" class="notranslate" translate="no" font-family="-apple-system, sans-serif" font-weight="900" font-size="120" fill="#ffffff" text-anchor="middle">E</text>
+        </svg>
+        <span class="logo-text notranslate" translate="no">ERAMBIOS</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Start</a></li>
+        <li><a href="media.html">Medien</a></li>
+        <li><a href="../index.html" style="color: var(--accent-color); font-weight: bold;">[ EN ]</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <header class="manifesto-header">
+      <div class="subtitle">Architektur des Seins</div>
+      <h1>ERAMBIOS</h1>
+      <p style="color: var(--text-muted); font-size: 1.1rem;">Ein intellektueller Zufluchtsort für verlässliche ontologische Forschung, strukturierte Philosophie und die Konfrontation mit der Realität.</p>
+    </header>
+
+    <section class="section-block">
+      <div style="font-size: 0.85rem; color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Erambios Auge • Aktueller Eintrag</div>
+      <h3>Der Fall der Gewährleistung: Die Bürokratie von ISO</h3>
+      <p>Die moderne Industrie hat echte Sicherheit durch ein holes Surrogat ersetzt: das ISO-Zertifikat. Wahre Garantie entspringt ausschließlich inhärenter Zuverlässigkeit, nicht Papierkram...</p>
+      <a href="../erambios-eye.html" style="color: var(--accent-color); font-weight: 600; text-decoration: none; font-size: 0.95rem;">Zum Ereignisregister &rarr;</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Erambios.org — Alle Rechte vorbehalten.</p>
+  </footer>
+
+</body>
+</html>
