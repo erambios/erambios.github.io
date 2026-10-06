@@ -6,68 +6,51 @@
   <title>Erambios – Erambios Auge (Ereignisregister)</title>
   <style>
     :root {
-      --bg-color: #0d0f12;
-      --card-bg: #161a20;
-      --accent-color: #d32f2f;
-      --text-color: #e1e6ed;
-      --text-muted: #8b949e;
-      --border-color: #21262d;
+      --bg-color: #0d0f12; --card-bg: #161a20; --accent-color: #d32f2f;
+      --text-color: #e1e6ed; --text-muted: #8b949e; --border-color: #21262d;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body {
-      background-color: #0d0f12 !important;
-      color: var(--text-color);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.8;
+      background-color: var(--bg-color); color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.8; overflow-x: hidden;
     }
     header {
       border-bottom: 1px solid var(--border-color);
       background-color: rgba(13, 15, 18, 0.95);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      position: sticky; top: 0; z-index: 1000;
     }
     nav {
-      max-width: 1000px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
+      max-width: 1000px; margin: 0 auto; display: flex;
+      justify-content: space-between; align-items: center; padding: 1rem 2rem;
     }
     .logo-box { display: flex; align-items: center; text-decoration: none; }
     .logo-text { color: #ffffff; font-weight: 800; font-size: 1.3rem; letter-spacing: 2.5px; margin-left: 0.9rem; }
     .nav-links { display: flex; list-style: none; gap: 1.5rem; }
     .nav-links a {
-      color: var(--text-color);
-      text-decoration: none;
-      font-size: 0.95rem;
+      color: var(--text-color); text-decoration: none; font-size: 0.95rem;
       transition: color 0.2s ease;
     }
     .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
-
     .container { max-width: 850px; margin: 3.5rem auto; padding: 0 1.5rem; }
     .page-header { margin-bottom: 3rem; }
     .page-header h1 { font-size: 2.4rem; color: #fff; font-weight: 900; margin-bottom: 0.5rem; }
     .page-header .subtitle { font-size: 1.1rem; color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; }
-
     .entry-card {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-left: 4px solid var(--accent-color);
-      padding: 2.5rem;
-      border-radius: 4px;
-      margin-bottom: 2.5rem;
+      background-color: var(--card-bg); border: 1px solid var(--border-color);
+      border-left: 4px solid var(--accent-color); padding: 2.5rem; border-radius: 4px; margin-bottom: 2.5rem;
     }
     .entry-meta { font-size: 0.85rem; color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
     .entry-card h2 { color: #ffffff; font-size: 1.5rem; margin-bottom: 1rem; }
     .entry-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem; }
-
     footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; }
+    @media (max-width: 768px) {
+      nav { flex-direction: column; gap: 1.2rem; padding: 1rem; }
+      .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    }
   </style>
 </head>
 <body>
-
   <header>
     <nav>
       <a href="index.html" class="logo-box notranslate" translate="no">
@@ -80,14 +63,23 @@
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Start</a></li>
+        <li><a href="filozofia.html">Philosophie</a></li>
+        <li><a href="tezy.html">Thesen</a></li>
+        <li><a href="edukacja.html">Bildung</a></li>
         <li><a href="erambios-eye.html" class="active">Erambios Auge</a></li>
-        <li><a href="media.html">Medien</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
         <li><a href="../erambios-eye.html" style="color: var(--accent-color); font-weight: bold;">[ EN ]</a></li>
       </ul>
     </nav>
   </header>
-    
-      <!-- ENTRY (NOWY) -->
+  <main class="container">
+    <header class="page-header">
+      <div class="subtitle">Ereignisregister</div>
+      <h1>Erambios Auge</h1>
+      <p style="color: var(--text-muted); font-size: 1.1rem; margin-top: 0.5rem;">Ein chronologisches Protokoll von Beobachtungen, Systemanalysen und der Konfrontation mit der Realität.</p>
+    </header>
+
+    <!-- ENTRY: 6 PAŹDZIERNIKA 2026 -->
     <article class="entry-card">
       <div class="entry-meta">Ereignisregister • 6. Oktober 2026</div>
       <h2>Der Fall der Gewährleistung: Die Bürokratie von ISO</h2>
@@ -97,8 +89,7 @@
       <p style="color: var(--accent-color); font-weight: 700; margin-top: 1.5rem;">Erambios Auge lehnt Papierschilde ab. Ein System hält entweder seine Struktur unter Druck oder es kollabiert – kein Zertifikat kann retten, was strukturell verfault ist.</p>
     </article>
 
-  
-  <!-- ENTRY (NOWY) -->
+    <!-- ENTRY: 4 PAŹDZIERNIKA 2026 -->
     <article class="entry-card">
       <div class="entry-meta">Ereignisregister • 4. Oktober 2026</div>
       <h2>Das digitale Elektorat leerer Ziffern</h2>
@@ -108,37 +99,7 @@
       <p>In der Phylotechnik und harten Ingenieurskunst gibt es keinen Platz für das Anhäufen leerer Etiketten oder algorithmischen Lärms. Jede Verbindung, jede Beziehung und jede Zeile Code muss ein reales Gewicht haben. Das Sammeln digitaler Ziffern ohne Inhalt ist die reinste Form intellektueller und systemischer Entropie.</p>
       <p style="color: var(--accent-color); font-weight: 700; margin-top: 1.5rem;">Erambios Auge registriert diesen verallgemeinerten Lärm und weist ihn am Tor ab. Qualität braucht keinen Beifall der Menge – Qualität stützt die Struktur, wenn alles andere zu Staub zerfällt.</p>
     </article>
-
-
-  <main class="container">
-    <header class="page-header">
-      <div class="subtitle">Ereignisregister</div>
-      <h1>Erambios Auge</h1>
-      <p style="color: var(--text-muted); font-size: 1.1rem; margin-top: 0.5rem;">Ein chronologisches Protokoll von Beobachtungen, Systemanalysen und der Konfrontation mit der Realität.</p>
-    </header>
-
-    <!-- ENTRY 2 (NAJNOWSZY) -->
-    <article class="entry-card">
-      <div class="entry-meta">Ereignisregister • Oktober 2026</div>
-      <h2>Der Fall der Gewährleistung: Die Bürokratie von ISO</h2>
-      <p>Die moderne Industrie und der Handel haben das Konzept der echten Sicherheit aufgegeben und durch ein holes, bürokratisches Surrogat ersetzt: das ISO-Zertifikat.</p>
-      <p>Um heute eine Garantie aufrechtzuerhalten, bedarf es weder struktureller Integrität noch einer makellosen Ausführung oder eines unerschütterlichen Bekenntnisses zur Wahrheit. Es erfordert lediglich das Bestehen eines Compliance-Audits – einer ritualisierten Checkliste, die von Beratern durchgeführt wird, deren Hauptfähigkeit darin besteht, Dokumentationen zu formatieren, nicht Materie zu verstehen. Ein Unternehmen kann von innen heraus verrotten, kompromisettierte Systeme liefern und in intellektueller Entropie versinken, während es gemütlich eine Wand voller glänzender ISO-Abzeichen zur Schau stellt, weil der Papierkram stimmt.</p>
-      <p>Dies ist eine systemische Täuschung. Wahre Sicherheit kann weder durch administrative Standards hergestellt noch durch institutionelle Konformität erkauft werden. Echte Garantie leitet sich ausschließlich aus inhärenter Zuverlässigkeit her – aus der rigorosen Disziplin des Erbauers, den Gesetzen der Physik und der harten Verifizierung der Realität.</p>
-      <p style="color: var(--accent-color); font-weight: 700; margin-top: 1.5rem;">Erambios Auge lehnt Papierschilde ab. Ein System hält entweder seine Struktur unter Druck oder es kollabiert – kein Zertifikat kann retten, was strukturell verfault ist.</p>
-    </article>
-
-    <!-- ENTRY 1 (WCZEŚNIEJSZY) -->
-    <article class="entry-card">
-      <div class="entry-meta">Ereignisregister • September 2026</div>
-      <h2>Das digitale Elektorat</h2>
-      <p>Die Illusion der Masse hat die Qualität der Architektur ersetzt. Algorithmen belohnen das Echo, nicht die Substanz.</p>
-      <p>Erambios baut kein Publikum auf, das nach Zahlen zählt. Wir bauen eine Struktur für diejenigen, die die Kompassnadel nach der Realität ausrichten, nicht nach der Meinung der Menge.</p>
-    </article>
   </main>
-
-  <footer>
-    <p>&copy; 2026 Erambios.org — Alle Rechte vorbehalten.</p>
-  </footer>
-
+  <footer><p>&copy; 2026 Erambios.org — Alle Rechte vorbehalten. | <a href="impressum.html" style="color:var(--text-muted);">Impressum</a> | <a href="datenschutz.html" style="color:var(--text-muted);">Datenschutz</a></p></footer>
 </body>
 </html>
