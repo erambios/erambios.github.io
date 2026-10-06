@@ -22,6 +22,7 @@
       line-height: 1.8;
       overflow-x: hidden;
     }
+
     header {
       border-bottom: 1px solid var(--border-color);
       background-color: rgba(13, 15, 18, 0.95);
@@ -84,6 +85,14 @@
     .card-link p { color: var(--text-muted); font-size: 0.9rem; }
 
     footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; }
+
+    @media (max-width: 768px) {
+      nav { flex-direction: column; gap: 1.2rem; padding: 1rem; }
+      .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+      .manifesto-header h1 { font-size: 1.8rem; }
+      .container { margin: 2rem auto; }
+      .section-block { padding: 1.5rem; }
+    }
   </style>
 </head>
 <body>
@@ -100,37 +109,58 @@
       </a>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Start</a></li>
-        <li><a href="media.html">Medien</a></li>
+        <li><a href="filozofia.html">Philosophie</a></li>
+        <li><a href="tezy.html">Thesen</a></li>
+        <li><a href="edukacja.html">Bildung</a></li>
+        <li><a href="erambios-eye.html">Erambios Auge</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
         <li><a href="../index.html" style="color: var(--accent-color); font-weight: bold;">[ EN ]</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="container">
+
+    <!-- GŁÓWNY NAGŁÓWEK -->
     <header class="manifesto-header">
       <div class="subtitle">Architektur des Seins</div>
       <h1>ERAMBIOS</h1>
       <p style="color: var(--text-muted); font-size: 1.1rem;">Ein intellektueller Zufluchtsort für verlässliche ontologische Forschung, strukturierte Philosophie und die Konfrontation mit der Realität.</p>
     </header>
 
-        <section class="section-block">
+    <!-- WIDGET: ERAMBIOS AUGE (NAJNOWSZY WPIS) -->
+    <section class="section-block">
       <div style="font-size: 0.85rem; color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Erambios Auge • Aktueller Eintrag</div>
       <h3>Der Fall der Gewährleistung: Die Bürokratie von ISO</h3>
       <p>Die moderne Industrie hat echte Gewährleistung durch ein hohles Surrogat ersetzt: das ISO-Zertifikat. Wahre Gewährleistung leitet sich ausschließlich aus inhärenter Zuverlässigkeit her, nicht aus Papierkram...</p>
       <a href="erambios-eye.html" style="color: var(--accent-color); font-weight: 600; text-decoration: none; font-size: 0.95rem;">Zum Ereignisregister &rarr;</a>
     </section>
 
+    <!-- SZYBKIE SKRÓTY DO SEKCJI PROJEKTU -->
+    <div class="links-grid">
+      <a href="filozofia.html" class="card-link">
+        <h4>Philosophie &rarr;</h4>
+        <p>Härtung des Willens, strukturelle Strenge und Widerstand gegen Entropie.</p>
+      </a>
+      <a href="tezy.html" class="card-link">
+        <h4>Thesen &rarr;</h4>
+        <p>Kern-Fundamente und strenges ontologisches Framework.</p>
+      </a>
+      <a href="edukacja.html" class="card-link">
+        <h4>Bildung &rarr;</h4>
+        <p>Ablehnung von Konformität, Forderung nach Meisterschaft über die Materie.</p>
+      </a>
+    </div>
 
-    <section class="section-block">
-      <div style="font-size: 0.85rem; color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Erambios Auge • Aktueller Eintrag</div>
-      <h3>Der Fall der Gewährleistung: Die Bürokratie von ISO</h3>
-      <p>Die moderne Industrie hat echte Sicherheit durch ein holes Surrogat ersetzt: das ISO-Zertifikat. Wahre Garantie entspringt ausschließlich inhärenter Zuverlässigkeit, nicht Papierkram...</p>
-      <a href="../erambios-eye.html" style="color: var(--accent-color); font-weight: 600; text-decoration: none; font-size: 0.95rem;">Zum Ereignisregister &rarr;</a>
-    </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Erambios.org — Alle Rechte vorbehalten.</p>
+    <p style="margin-bottom: 0.8rem;">
+      <a href="https://x.com/ERAMBIOS" target="_blank" style="color: var(--text-muted); text-decoration: none; margin: 0 0.8rem;">X (Twitter)</a> | 
+      <a href="https://www.linkedin.com/in/tomasz-wisniewski-4987b243a" target="_blank" style="color: var(--text-muted); text-decoration: none; margin: 0 0.8rem;">LinkedIn</a> | 
+      <a href="https://substack.com/@tomaszwiniewski" target="_blank" style="color: var(--text-muted); text-decoration: none; margin: 0 0.8rem;">Substack</a>
+    </p>
+    <p>&copy; 2026 Erambios.org — Alle Rechte vorbehalten. | <a href="impressum.html" style="color:var(--text-muted);">Impressum</a> | <a href="datenschutz.html" style="color:var(--text-muted);">Datenschutz</a></p>
   </footer>
 
 </body>
